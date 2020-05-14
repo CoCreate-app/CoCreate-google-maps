@@ -6,7 +6,6 @@ function Direction() {
         this.initDirection();
     }
 }
-
 Direction.prototype = {
     constructor: Direction(),
     initDirection: function() {
