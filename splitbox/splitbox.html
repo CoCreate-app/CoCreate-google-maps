@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Test Project</title>
+		<style>
+			.sbPanel {
+				flex-grow: 1;
+			}
+
+			.sbTrack {
+				display: flex;
+				flex-grow: 1;
+			}
+
+			.sbRow {
+				flex-flow: row nowrap;
+			}
+
+			.sbColumn {
+				flex-flow: column nowrap;
+			}
+
+			.sbSplitter {
+				flex-grow: 0;
+				background-color: #C0C0C0;
+			}
+
+			.sbSplitter:hover {
+				background-color: #E0E0E0;
+			}
+
+			.sbHorizontal {
+				min-width: 100%;
+				min-height: 8px;
+				cursor: row-resize;
+			}
+
+			.sbVertical {
+				min-width: 8px;
+				min-height: 100%;
+				cursor: col-resize;
+			}
+
+			body {
+				display: flex;
+				flex-flow: column nowrap;
+				height: 100vh;
+				max-height: 100vh;
+				margin: 0;
+				padding: 0;
+			}
+
+			.leaf {
+				flex-grow: 1;
+			}
+
+			.container {
+				flex-grow: 1;
+				margin: 1em;
+				border: 2px solid #808080;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container sbColumn sbTrack">
+			<div class="sbPanel" style="flex: 0.5 0.5 0px;"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+			<div class="sbHorizontal sbSplitter"></div>
+			<div class="sbRow sbTrack" style="flex: 0.5 0.5 0px;">
+				<div class="sbPanel"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+				<div class="sbVertical sbSplitter"></div>
+				<div class="sbColumn sbTrack">
+					<div class="sbPanel"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+					<div class="sbHorizontal sbSplitter"></div>
+					<div class="sbPanel"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+					<div class="sbHorizontal sbSplitter"></div>
+					<div class="sbPanel"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+				</div>
+				<div class="sbVertical sbSplitter"></div>
+				<div class="sbPanel"><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                    voluptatibus.</p></div>
+			</div>
+		</div>
+		<script src="./splitbox.js"></script>
+	</body>
+</html>

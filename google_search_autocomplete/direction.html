@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Google Search Autocomplete</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./address.css"></style>
+    </head>
+    <body>
+        <div data-location_request="true"></div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Origin</td>
+                        <td colspan="3">
+                            <input type="search" data-direction="origin" data-map_id="0" data-place="address" placeholder="Origin" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>
+                            <input type="text" data-direction="origin" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="0">
+                        </td>
+                        <td>Latitude</td>
+                        <td>
+                            <input type="text" data-direction="origin" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Destination</td>
+                        <td colspan="3">
+                            <input type="search" data-direction="destination" data-map_id="0" data-place="address" placeholder="Destination" class="main-search" data-place_id="1" style="width:100%" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>
+                            <input type="text" data-direction="destination" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="1">
+                        </td>
+                        <td>Latitude</td>
+                        <td>
+                            <input type="text" data-direction="destination" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Route</td>
+                        <td colspan="3">
+                            <input type="search" data-direction="route" data-map_id="0" data-place="address" placeholder="Route" class="main-search" data-place_id="2" style="width:100%" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>
+                            <input type="text" data-direction="route" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="2">
+                        </td>
+                        <td>Latitude</td>
+                        <td>
+                            <input type="text" data-direction="route" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Route</td>
+                        <td colspan="3">
+                            <input type="search" data-direction="route" data-map_id="0" data-place="address" placeholder="Route" class="main-search" data-place_id="3" style="width:100%" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>
+                            <input type="text" data-direction="route" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="3">
+                        </td>
+                        <td>Latitude</td>
+                        <td>
+                            <input type="text" data-direction="route" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="3">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- data-place="map" not needed class google_map + data-place_id should be used -->
+            <div class="google_map" data-map_id="0"></div>
+            <!--"DRIVING" || "BICYCLING" || "TRANSIT" || "WALKING"-->
+            <input type="hidden" data-map_id="0" data-direction="travel_mode" value="DRIVING">
+            <!--{
+              arrivalTime: Date,
+              departureTime: Date,
+              modes[]: TransitMode, // "BUS" | "RAIL" | "SUBWAY" | "TRAIN" | "TRAM"
+              routingPreference: TransitRoutePreference // "FEWER_TRANSFERS" || "LESS_WALKING"
+            }-->
+            <input type="hidden" data-map_id="0" data-direction="transit_option" value="">
+            <!--{
+              departureTime: Date,
+              trafficModel: TrafficModel // "bestguess" || "pessimistic || "optimistic"
+            }-->
+            <input type="hidden" data-map_id="0" data-direction="driving_option" value="">
+            <!--"UnitSystem.METRIC" || "UnitSystem.IMPERIAL"-->
+            <input type="hidden" data-map_id="0" data-direction="unit_system" value="">
+            <!--true || false-->
+            <input type="hidden" data-map_id="0" data-direction="provide_route_alternatives" value="">
+            <!--true || false-->
+            <input type="hidden" data-map_id="0" data-direction="avoid_ferries" value="">
+            <!--true || false-->
+            <input type="hidden" data-map_id="0" data-direction="avoid_highways" value="">
+            <!--true || false-->
+            <input type="hidden" data-map_id="0" data-direction="avoid_tolls" value="">
+            <!--true || false-->
+            <input type="hidden" data-map_id="0" data-direction="optimize_waypoint" value="">
+            
+            <button onclick="clearAll();">Clear</button>
+        </div>
+        
+        <script type="text/javascript" src="./common.js"></script>
+        <script type="text/javascript" src="./direction.js"></script>
+        <script type="text/javascript" src="./map.js"></script>
+        <script type="text/javascript" src="./place.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script>
+   
+    </body>
+</html>
