@@ -45,9 +45,7 @@ Place.prototype = {
             ids.push(item.dataset.place_id);
         }
         ids = ids.filter(onlyUnique);
-        // var address_search = container.querySelectorAll("[data-place='establishment']");
         var _this = this;
-        
         for (var i = 0; i < ids.length; i++) {
             var place_id = ids[i];
             var search_item = container.querySelectorAll("input[type='search'][data-place_id='" + place_id + "']");
@@ -73,16 +71,17 @@ Place.prototype = {
         ids.forEach(function(element, index) {
             var place_id = element;
             var items = container.querySelectorAll("input.main-search[data-place_id='" + place_id + "']");
-            for (var i = 0; i < items.length; i++) {
-                var search_type = items.item(i).dataset.place;
-                if (search_type == "establishment") _this.establishment[index].addListener('place_changed', function() { _this.fillInAddress(container, _this.establishment[index], place_id); });
-                if (search_type == "address") _this.address[index].addListener('place_changed', function() { _this.fillInAddress(container, _this.address[index], place_id); });
-                if (search_type == "administrative_area_level_2") _this.city[index].addListener('place_changed', function(){ _this.fillInAddress(container, _this.city[index], place_id);});
-                if (search_type == "region_country") _this.region_country[index].addListener('place_changed', function(){ _this.fillInAddress(container, _this.region_country[index], place_id);});
-            }
+            items.forEach(function(item, idx){
+                var search_type = item.dataset.place;
+                if (search_type == "establishment") _this.establishment[index].addListener('place_changed', function() { _this.fillInAddress(container, _this.establishment[index], item); });
+                if (search_type == "address") _this.address[index].addListener('place_changed', function() { _this.fillInAddress(container, _this.address[index], item); });
+                if (search_type == "administrative_area_level_2") _this.city[index].addListener('place_changed', function(){ _this.fillInAddress(container, _this.city[index], item);});
+                if (search_type == "region_country") _this.region_country[index].addListener('place_changed', function(){ _this.fillInAddress(container, _this.region_country[index], item);});
+            })
         });
     },
-    fillInAddress: function(container, addressInfo, place_id) {
+    fillInAddress: function(container, addressInfo, item) {
+        const place_id = item.dataset.place_id;
         var place = addressInfo.getPlace();
         for (var i = 0; i < place.address_components.length; i++) {
             var addressType = place.address_components[i].types[0];
@@ -110,24 +109,29 @@ Place.prototype = {
         if (place.adr_address && address)
             address.value = stripHtml(place.adr_address);
         const longitude = container.querySelector("[data-place='longitude'][data-place_id='" + place_id + "']");
-        if (longitude) longitude.value = place.geometry.location.lng();
         const latitude = container.querySelector("[data-place='latitude'][data-place_id='" + place_id + "']");
-        if (latitude) latitude.value = place.geometry.location.lat();
+        if (longitude && latitude) {
+            longitude.value = place.geometry.location.lng();
+            latitude.value = place.geometry.location.lat();
+            if ("createEvent" in container) {
+                var evt = container.createEvent("HTMLEvents");
+                evt.initEvent("change", false, true);
+                longitude.dispatchEvent(evt);
+                latitude.dispatchEvent(evt);
+            }
+            else
+                longitude.fireEvent("onchange");
+                latitude.fireEvent("onchange");
+        }
         var map_id = container.querySelector("[data-place_id='" + place_id + "']").dataset.map_id;
         var mapDiv = container.querySelector(".google_map[data-map_id='" + map_id + "']");
-        if (mapDiv) {
+        const options = container.querySelector(["[data-autodirection]"]);
+        var autodirection;
+        if (options) autodirection = options.dataset.autodirection;
+        else autodirection = "true";
+        if (mapDiv && (item.dataset.direction != "destination" || autodirection != "true")) {
             mapDiv.dataset.map_lng = place.geometry.location.lng();
             mapDiv.dataset.map_lat = place.geometry.location.lat();
         }
-        
-        /*temporary*/
-        // if (place_id == 0) {
-        //     document.querySelector("[data-place='direction_info'][data-place_id='0']").dataset.src_lng = place.geometry.location.lng();
-        //     document.querySelector("[data-place='direction_info'][data-place_id='0']").dataset.src_lat = place.geometry.location.lat();
-        // }
-        // if (place_id == 1) {
-        //     document.querySelector("[data-place='direction_info'][data-place_id='0']").dataset.dst_lng = place.geometry.location.lng();
-        //     document.querySelector("[data-place='direction_info'][data-place_id='0']").dataset.dst_lat = place.geometry.location.lat();
-        // }
     }
 };

@@ -6,16 +6,19 @@ function Direction() {
         this.initDirection();
     }
 }
+
 Direction.prototype = {
     constructor: Direction(),
     initDirection: function() {
         var _this = this;
-        const mapElements = document.querySelectorAll("[data-direction='destination'][data-map_id]");
-        for (const element of mapElements)
+        const dstElements = document.querySelectorAll("[data-direction='destination'][data-map_id][data-place='longitude'], [data-direction='destination'][data-map_id][data-place='latitude']");
+        dstElements.forEach(function(element, index){
             element.addEventListener("change", function(event){
+                console.log(event);
                 const map_id = element.dataset.map_id;
                 _this.confirmDirection(map_id);
             });
+        });
     },
     confirmDirection: function(map_id) {
         console.log(map_id);
