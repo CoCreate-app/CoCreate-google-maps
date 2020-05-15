@@ -119,9 +119,10 @@ Place.prototype = {
                 longitude.dispatchEvent(evt);
                 latitude.dispatchEvent(evt);
             }
-            else
+            else {
                 longitude.fireEvent("onchange");
                 latitude.fireEvent("onchange");
+            }
         }
         var map_id = container.querySelector("[data-place_id='" + place_id + "']").dataset.map_id;
         var mapDiv = container.querySelector(".google_map[data-map_id='" + map_id + "']");

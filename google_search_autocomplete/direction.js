@@ -2,7 +2,6 @@
 
 function Direction() {
     if (this) {
-        this.waypoints = [];
         this.initDirection();
     }
 }
@@ -14,14 +13,30 @@ Direction.prototype = {
         const dstElements = document.querySelectorAll("[data-direction='destination'][data-map_id][data-place='longitude'], [data-direction='destination'][data-map_id][data-place='latitude']");
         dstElements.forEach(function(element, index){
             element.addEventListener("change", function(event){
-                console.log(event);
                 const map_id = element.dataset.map_id;
                 _this.confirmDirection(map_id);
             });
         });
     },
     confirmDirection: function(map_id) {
-        console.log(map_id);
+        const waypointElements = document.querySelectorAll("[data-direction='waypoint'][data-map_id='" + map_id + "'][data-place='longitude'], [data-direction='waypoint'][data-map_id='" + map_id + "'][data-place='latitude']");
+        var latlngs = [];
+        var points = [];
+        for (var wpElement of waypointElements) {
+            if (!wpElement.value) continue;
+            var place_id = wpElement.dataset.place_id;
+            if (latlngs[place_id]) {
+                if (wpElement.dataset.place == "latitude") {
+                    points.push({location:new google.maps.LatLng(wpElement.value, latlngs[place_id])});
+                }
+                else
+                    points.push({location:new google.maps.LatLng(latlngs[place_id], wpElement.value)});
+                delete latlngs[place_id];
+            }
+            else {
+                latlngs[place_id] = wpElement.value;
+            }
+        }
         var directionsService = new google.maps.DirectionsService();
         var directionsRenderer = new google.maps.DirectionsRenderer();
         var srcLng = document.querySelector("[data-direction='origin'][data-place='longitude'][data-map_id='" + map_id + "']").value;
@@ -88,6 +103,8 @@ Direction.prototype = {
                 const avoidTolls = allOptions.querySelector("[data-direction='avoid_tolls']:checked");
                 if (avoidTolls)
                     request.avoidTolls = true;
+                if (points)
+                    request.waypoints = points;
             }
             directionsService.route(request, function(result, status) {
                 if (status == 'OK') {
