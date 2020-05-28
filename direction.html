@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Google Search Autocomplete</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./address.css"></style>
+        <link href="https://cdn.cocreate.app/CoCreate.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div data-location_request="true">
+            <div>
+                <div>
+                    <input type="text" data-map_autocomplete="true" data-direction="origin" data-map_id="0" data-place="address" placeholder="Origin" class="main-search floating-label_field" data-place_id="0" autocomplete="off">
+                    <input type="hidden" data-direction="origin" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="0">
+                    <input type="hidden" data-direction="origin" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="0">
+                </div>
+                <div class="Sortable waypoints" data-group_name="Sort">
+                    <div id="waypoint" class="template Sort">
+                        <div style="display:inline-block;width: calc(100% - 20px);">
+                            <div>
+                                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label_field" data-place_id="4" autocomplete="off">
+                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="4">
+                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="4">
+                            </div>
+                        </div>
+                        <span style="float:right;"><a data-clone_id="waypoint" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+                        <!--  -->
+                    </div>
+                </div>
+                <a data-clone_id="waypoint" class="cloneBtn noDrag" style="display: block">Add waypoint</a>
+                <div>
+                    <input type="text" data-map_autocomplete="true" data-direction="destination" data-map_id="0" data-place="address" placeholder="Destination" class="main-search floating-label_field" data-place_id="1" style="width:100%" autocomplete="off">
+                    <input type="hidden" data-direction="destination" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="1">
+                    <input type="hidden" data-direction="destination" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="1">
+                </div>
+            </div>
+            <!--<button data-map_id="0" onclick="confirmDirection(this);">confirmDirection</button>-->
+            <!--<button onclick="clearAll();">Clear</button>-->
+            <div class="google_map" data-map_id="0"></div>
+            <div class="direction_option" data-map_id="0" data-autodirection="true">
+                <label>TravelMode</label>
+                <br>
+                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="DRIVING" checked>
+                <label>DRIVING</label>
+                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="BICYCLING">
+                <label>BICYCLING</label>
+                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="TRANSIT">
+                <label>TRANSIT</label>
+                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="WALKING">
+                <label>WALKING</label>
+                <br>
+                <label>TransitOption</label>
+                <br>
+                <div data-map_id="0" data-direction="transit_option">
+                    <label>ArrivalTime</label>
+                    <input type="datetime-local" data-map_id="0" data-direction="arrivalTime" placeholder="Date" value="">
+                    <br>
+                    <label>DepartureTime</label>
+                    <input type="datetime-local" data-map_id="0" data-direction="t_departureTime" placeholder="Date" value="">
+                    <br>
+                    <label>TransitMode</label>
+                    <br>
+                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="BUS">
+                    <label>BUS</label>
+                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="RAIL">
+                    <label>RAIL</label>
+                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="SUBWAY">
+                    <label>SUBWAY</label>
+                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="TRAIN">
+                    <label>TRAIN</label>
+                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="TRAM">
+                    <label>TRAM</label>
+                    <br>
+                    <label>RoutingPreference</label>
+                    <br>
+                    <input type="radio" name="routingPreference" data-map_id="0" data-direction="routingPreference" value="FEWER_TRANSFERS">
+                    <label>FEWER_TRANSFERS</label>
+                    <input type="radio" name="routingPreference" data-map_id="0" data-direction="routingPreference" value="LESS_WALKING">
+                    <label>LESS_WALKING</label>
+                </div>
+                <label>DrivingOption</label>
+                <br>
+                <div data-direction="driving_option">
+                    <label>DepartureTime</label>
+                    <input type="datetime-local" data-map_id="0" data-direction="d_departureTime" placeholder="Date" value="">
+                    <br>
+                    <label>TrafficModel</label>
+                    <br>
+                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="bestguess">
+                    <label>bestguess</label>
+                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="pessimistic">
+                    <label>pessimistic</label>
+                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="optimistic">
+                    <label>optimistic</label>
+                </div>
+                <label>UnitSystem</label>
+                <br>
+                <input type="radio" name="unit_system" data-map_id="0" data-direction="unitSystem" value="METRIC">
+                <label>METRIC</label>
+                <input type="radio" name="unit_system" data-map_id="0" data-direction="unitSystem" value="IMPERIAL">
+                <label>IMPERIAL</label>
+                <br>
+                <input type="checkbox" data-map_id="0" data-direction="provideRouteAlternatives">
+                <label>ProvideRouteAlternatives</label>
+                <br>
+                <input type="checkbox" data-map_id="0" data-direction="avoidFerries">
+                <label>AvoidFerries</label>
+                <br>
+                <input type="checkbox" data-map_id="0" data-direction="avoidHighways">
+                <label>AvoidHighways</label>
+                <br>
+                <input type="checkbox" data-map_id="0" data-direction="avoidTolls">
+                <label>AvoidTolls</label>
+                <br>
+                <input type="checkbox" data-map_id="0" data-direction="optimizeWaypoints">
+                <label>OptimizeWaypoint</label>
+            </div>
+            
+        <script type="text/javascript" src="CoCreateMap.js"></script>
+        <script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>
+        <script type="text/javascript" src="CoCreateMap_Direction.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script>
+        <script type="text/javascript">
+            function initMapSettings() {
+                var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
+                var coCreateMapDirection = new CoCreateMapDirection();
+                initSortableSettings(coCreateMapAutocomplete);
+            }
+            function initSortableSettings(coCreateMapAutocomplete) {
+                var observer = new MutationObserver(function(mutations){
+                    mutations.forEach(function(mutation){
+                        if (mutation.type == "childList" && mutation.target.classList.contains("Sortable") && mutation.target.classList.contains("waypoints") && mutation.addedNodes.length == 1) {
+                            var addedNode = mutation.addedNodes.item(0);
+                            var place_ids = addedNode.querySelectorAll("[data-place_id]");
+                            for (var place_id of place_ids) {
+                                place_id.setAttribute("data-place_id", addedNode.getAttribute("prefix"));
+                            }
+                            console.log(coCreateMapAutocomplete);
+                            coCreateMapAutocomplete.init();
+                        }
+                    });
+                });
+                var config = { attribute:false, childList: true, characterData: false, subtree: true };
+                
+                observer.observe(document.body, config);
+            }
+        </script>
+        <script>
+        var config = {
+          apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+          securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+          organization_Id: '5de0387b12e200ea63204d6c'
+        }
+        </script>
+        <script src="../CoCreate-map.js/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>
+        <script src="../CoCreate-map.js/sort/CoCreate-sort.js"></script>
+    
+    </body>
+</html>

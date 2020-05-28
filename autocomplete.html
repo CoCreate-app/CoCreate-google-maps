@@ -4,32 +4,32 @@
         <meta charset="utf-8">
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./address.css"></style>
+        <link rel="stylesheet" href="address.css"></style>
     </head>
     <body>
-        <div>
+        <div data-location_request="true" >
             <table>
                 <tbody>
                     <tr>
                         <td>Establishment</td>
                         <td colspan="3">
-                            <input type="search" data-place="establishment" data-map_id="0" placeholder="Establishment" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
+                            <input type="text" data-map_autocomplete="true" data-place="establishment" data-map_id="0" placeholder="Establishment" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
                         </td>
                     </tr>
                     <tr>
                         <td>Address 1</td>
                         <td colspan="3">
-                            <input type="search" data-place="address" data-map_id="0" placeholder="Address" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
+                            <input type="text" data-map_autocomplete="true" data-place="address" data-map_id="0" placeholder="Address" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
                         </td>
                     </tr>
                     <tr>
                         <td>City</td>
                         <td>
-                            <input class="main-search" type="search" data-map_id="0" data-place="administrative_area_level_2" placeholder="City" data-place_id="0" autocomplete="off">
+                            <input class="main-search" data-map_autocomplete="true" type="text" data-map_id="0" data-place="administrative_area_level_2" placeholder="City" data-place_id="0" autocomplete="off">
                         </td>
                         <td>Region / Country</td>
                         <td>
-                            <input type="text" data-place="region_country" data-map_id="0" placeholder="Region / Country" data-place_id="0" autocomplete="off">
+                            <input type="text" data-map_autocomplete="true" data-place="region_country" data-map_id="0" placeholder="Region / Country" data-place_id="0" autocomplete="off">
                         </td>
                     </tr>
                     <tr>
@@ -86,23 +86,23 @@
                     <tr>
                         <td>Establishment</td>
                         <td colspan="3">
-                            <input type="search" data-place="establishment" data-map_id="1" placeholder="Establishment" class="main-search" data-place_id="1" style="width:100%">
+                            <input type="text" data-map_autocomplete="true" data-place="establishment" data-map_id="1" placeholder="Establishment" class="main-search" data-place_id="1" style="width:100%">
                         </td>
                     </tr>
                     <tr>
                         <td>Address 2</td>
                         <td colspan="3">
-                            <input type="search" data-place="address" data-map_id="1" placeholder="Address" class="main-search" data-place_id="1" style="width:100%">
+                            <input type="text" data-map_autocomplete="true" data-place="address" data-map_id="1" placeholder="Address" class="main-search" data-place_id="1" style="width:100%">
                         </td>
                     </tr>
                     <tr>
                         <td>City</td>
                         <td>
-                            <input type="search" data-place="administrative_area_level_2" data-map_id="1" placeholder="City" data-place_id="1">
+                            <input type="text" data-map_autocomplete="true" data-place="administrative_area_level_2" data-map_id="1" placeholder="City" data-place_id="1">
                         </td>
                         <td>Region / Country</td>
                         <td>
-                            <input type="text" data-place="region_country" data-map_id="1" placeholder="Region / Country" data-place_id="1">
+                            <input type="text" data-map_autocomplete="true" data-place="region_country" data-map_id="1" placeholder="Region / Country" data-place_id="1">
                         </td>
                     </tr>
                     <tr>
@@ -157,10 +157,13 @@
             <div data-location_request="true"></div>
             <button onclick="clearAll();">Clear</button>
         </div>
-        <script type="text/javascript" src="./common.js"></script>
-        <script type="text/javascript" src="./map.js"></script>
-        <script type="text/javascript" src="./place.js"></script>
-        <script type="text/javascript" src="./direction.js"></script>
+        <script type="text/javascript" src="CoCreateMap.js"></script>
+        <script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script>
+        <script type="text/javascript">
+            function initMapSettings() {
+                var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
+            }
+        </script>
     </body>
 </html>
