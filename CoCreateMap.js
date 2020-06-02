@@ -1,4 +1,4 @@
-var CoCreateMap = function() {
+var CoCreateMap = function(object) {
     
     // variables
     // this.depth = 0;
@@ -7,9 +7,9 @@ var CoCreateMap = function() {
     this.mapDivSelector = ".google_map";
     
     // functions
-    this.init();
+    this.init(object);
 
-    // this.requireLocationSelector = "[data-location_request']";
+    this.requireLocationSelector = "data-geolocation";
 };
 
 /* global navigator, MutationObserver, google */
@@ -17,18 +17,23 @@ CoCreateMap.prototype = {
     mapDivs:[],
     maps:[],
     services:[],
-    // markers:[], // MultiMarker & control
+    markers:[], // MultiMarker & control
     constructor: CoCreateMap,
-    init: function(){
+    init: function(object){
         let _this = this;
         this.__proto__.mapDivs = document.querySelectorAll(this.mapDivSelector);
-        let curLocation = document.querySelector("[data-location_request]");
-        let isCurLocation = curLocation ? curLocation.dataset.location_request : false;
-        if (navigator.geolocation && isCurLocation == "true") {
-            let options = {timeout:6000};
-            navigator.geolocation.getCurrentPosition(position=>{this.showLocation(position)}, err=>{this.errHandler(err)}, options);
+        if (object !== undefined) {
+            this.renderMap(object.mapInfo, object.markerInfo);
         }
-        else this.errHandler({code:1});
+        else {
+            let curLocation = document.querySelector(`[${this.requireLocationSelector}]`);
+            let isCurLocation = curLocation ? curLocation.getAttribute(this.requireLocationSelector) : false;
+            if (navigator.geolocation && isCurLocation == "true") {
+                let options = {timeout:5000};
+                navigator.geolocation.getCurrentPosition(this.showLocation, this.errHandler, options);
+            }
+            else this.errHandler({code:1});
+        }
         
         let observer = new MutationObserver(
             function (mutationList, observer) {
@@ -68,7 +73,7 @@ CoCreateMap.prototype = {
         else if(err.code == 2)
             alert("Error: Position is unavailable!");
     },
-    renderMap: function(mapInfo) {
+    renderMap: function(mapInfo, markerInfo) {
         let latitude = parseFloat(mapInfo.lat);
         let longitude = parseFloat(mapInfo.lng);
         let zoom = mapInfo.zoom;
@@ -76,20 +81,52 @@ CoCreateMap.prototype = {
         let map_center = new google.maps.LatLng(latitude, longitude);
         this.__proto__.maps[map_id] = new google.maps.Map(
             document.querySelector(`.google_map[data-map_id='${map_id}']`), {center: map_center, zoom: zoom});
-        // this.__proto__.markers[map_id] = [];
+        this.__proto__.markers[map_id] = [];
         this.__proto__.services[map_id] = new google.maps.places.PlacesService(this.maps[map_id]);
-        this.createMarker({lat:latitude, lng:longitude}, map_id, true);
+        if (markerInfo === undefined) {
+            // this.createMarker({lat:latitude, lng:longitude}, map_id, true);
+            // this.setMarker(map_id, {draggable: true, position: {lat:latitude, lng:longitude}});
+        }
+        else {
+            if (markerInfo.option.position == undefined) markerInfo.option.position = {lat:latitude, lng:longitude};
+            this.setMarker(map_id, markerInfo.option, markerInfo.marker_id);
+        }
     },
-    createMarker: function(place, map_id, draggable = false) {
-        let _this = this;
-        // this.__proto__.markers[map_id].push(
-            new google.maps.Marker({
-            map: _this.maps[map_id],
-            draggable:draggable,
-            position: place
-        })
-        // );
+    /**
+     * @param map_id : map_id
+     * @param option : MarkerOptions => option.position : exist - add & update, undefined - delete
+     * @param marker_id : marker_id : not exist - add,  exist - update & delete
+     * @return marker_id : success - marker_id, failure - -1;
+     */
+    setMarker: function(map_id, option, marker_id) {
+        option.map = this.maps[map_id];
+        if (option.position !== undefined) { // add & update
+            if (marker_id === undefined) { // add
+                this.markers[map_id].push(new google.maps.Marker(option));
+                return this.markers[map_id].length - 1;
+            }
+            else {
+                this.markers[map_id][marker_id] = new google.maps.Marker(option);
+                return marker_id;
+            }
+        }
+        else // delete
+            if (marker_id === undefined) return -1; // error
+            else {
+                delete this.markers[map_id][marker_id]; // delete
+                return marker_id;
+            }
     },
+    // createMarker: function(place, map_id, draggable = false) {
+    //     let _this = this;
+    //     // this.__proto__.markers[map_id].push(
+    //         new google.maps.Marker({
+    //         map: _this.maps[map_id],
+    //         draggable:draggable,
+    //         position: place
+    //     });
+    //     // );
+    // },
     /**
      * @param attributeName : data attribute name of input -> object key
      * @param addInfo : additional selector of input

@@ -45,6 +45,7 @@ var CoCreateMapAutocomplete = function() {
         for (let item of places) {
             ids.push(item.dataset.place_id);
         }
+        let place_type_json = {'address':'address','administrative_area_level_2':'(cities)','region_country':'(regions)','establishment':'establishment'};
         ids = ids.filter(onlyUnique);
         ids.forEach(function(element, index){
             let place_id = element;
@@ -53,10 +54,12 @@ var CoCreateMapAutocomplete = function() {
             autocomplete_item.forEach(function(element, j){
                 let autocomplete;
                 let place_type = element.dataset.place;
-                if (place_type == "address") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['address']});
+                // if(Object.keys(place_type_json).indexOf(place_type)!=-1)
+                if (place_type_json[place_type] !== undefined) autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:place_type_json[place_type]});
+                /*if (place_type == "address") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['address']});
                 if (place_type == "administrative_area_level_2") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['(cities)']});
                 if (place_type == "region_country") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['(regions)']});
-                if (place_type == "establishment") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['establishment']});
+                if (place_type == "establishment") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['establishment']});*/
                 // else autocomplete.setFields(fieldSetting); // omit for all fields
                 if (element.matches(_this.searchSelector))
                     autocomplete.addListener('place_changed', function() {

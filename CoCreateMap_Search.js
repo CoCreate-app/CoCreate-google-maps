@@ -192,8 +192,10 @@ var CoCreateMapSearch = function() {
         let _this = this;
         console.log(object);
         this.services[map_id].getDetails(object, function(place, status){
-            let position = place.geometry.location;
-            _this.createMarker(position, map_id);
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                let position = place.geometry.location;
+                _this.createMarker(position, map_id);
+            }
         });
     };
     
