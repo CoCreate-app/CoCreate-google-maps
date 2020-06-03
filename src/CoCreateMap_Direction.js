@@ -87,6 +87,7 @@ var CoCreateMapDirection = function() {
                 latlngs[place_id] = wpElement.value;
             }
         }
+        console.log(waypointElements);
         var srcLng = document.querySelector(`[data-direction='origin'][data-place='longitude'][data-map_id='${map_id}']`).value;
         var srcLat = document.querySelector(`[data-direction='origin'][data-place='latitude'][data-map_id='${map_id}']`).value;
         var dstLng = document.querySelector(`[data-direction='destination'][data-place='longitude'][data-map_id='${map_id}']`).value;
@@ -104,6 +105,7 @@ var CoCreateMapDirection = function() {
                     map_id: map_id,
                     origin: {lat:srcLat, lng:srcLng},
                     destination: {lat:dstLat, lng:dstLng},
+                    waypoints: points,
                     travelMode: "DRIVING"
                 },
                 ...object
@@ -173,6 +175,7 @@ var CoCreateMapDirection = function() {
             else request[key] = element;
         }
         directionsRenderer.setMap(this.maps[directionInfo.map_id]);
+        console.log(request);
         directionsService.route(request, function(result, status) {
             if (status == 'OK') {
                 directionsRenderer.setDirections(result);

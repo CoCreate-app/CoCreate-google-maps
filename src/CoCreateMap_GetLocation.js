@@ -80,4 +80,4 @@ var CoCreateMapGetLocation = function() {
 
 CoCreateMapGetLocation.prototype = Object.create(CoCreateMapAnimate.prototype);
 CoCreateMapGetLocation.prototype.constructor = CoCreateMapGetLocation;
-var CoCreateMapGetLocation = new CoCreateMapGetLocation();
+// var CoCreateMapGetLocation = new CoCreateMapGetLocation();

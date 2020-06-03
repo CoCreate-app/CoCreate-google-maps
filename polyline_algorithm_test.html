@@ -1,0 +1,84 @@
+<script>
+/*
+points = [{lat:xx, lng:xx}, {lat:xx, lng:xx}, {lat:xx, lng:xx}, ...];
+*/
+function polylineencode(points) {
+    let result = "";
+    let passpoint;
+    for (let point of points) {
+        if (passpoint) {
+            result += encode(point.lat - passpoint.lat);
+            result += encode(point.lng - passpoint.lng);
+        }
+        else {
+            result += encode(point.lat);
+            result += encode(point.lng);
+        }
+        passpoint = point;
+    }
+    return result;
+    function encode(num) {
+        let dec = Math.round(num * 100000);
+        dec <<= 1;
+        if (num < 0) dec = ~dec;
+        let chunks = [];
+        do {
+            chunks.push(dec % 32);
+            dec = Math.floor(dec / 32);
+        } while(dec > 0);
+        for (let key in chunks) {
+            if (key < chunks.length - 1)
+                chunks[key] |= 32;
+            chunks[key] += 63;
+        }
+        let result = "";
+        for (let chunk of chunks) result += String.fromCharCode(chunk);
+        return result;
+    }
+}
+function polylinedecode(code) {
+    let trucks = [];
+    let truck = 0;
+    let carriage_q = 0;
+    let lat;
+    let point;
+    for (let x = 0, xx = code.length; x < xx; ++x) {
+        let i = code.charCodeAt(x);
+        i -= 63;
+        let _5_bits = i << (32 - 5) >>> (32 - 5);
+        truck |= _5_bits << carriage_q;
+        carriage_q += 5;
+        let is_last = (i & (1 << 5)) == 0;
+        if (is_last) {
+            truck >>>= 1;
+            if ((truck & 1) == 1) {
+                truck = ~truck;
+            }
+            if (lat === undefined) lat = truck / 100000;
+            else {
+                if (point === undefined)
+                    point = {lat: lat, lng: truck / 100000};
+                else {
+                    point.lat += lat;
+                    point.lng += truck / 100000;
+                }
+                trucks.push({lat:point.lat, lng:point.lng});
+                lat = undefined;
+            }
+            carriage_q = 0;
+            truck = 0;
+        }
+    }
+    return trucks;
+}
+
+function polyline(){
+    let points = [{lat:38.5, lng:-120.2}, {lat:40.7, lng:-120.95}, {lat:43.252, lng:-126.453}];
+    console.log(points);
+    let code = polylineencode(points);
+    console.log(code);
+    let result = polylinedecode(code);
+    console.log(result);
+}
+polyline();
+</script>

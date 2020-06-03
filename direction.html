@@ -121,34 +121,36 @@
                 <label>OptimizeWaypoint</label>
             </div>
             
-        <script type="text/javascript" src="CoCreateMap.js"></script>
-        <script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>
-        <script type="text/javascript" src="CoCreateMap_Direction.js"></script>
+        <script type="text/javascript" src="./dist/CoCreateMap.min.js"></script>
+        <!--<script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>-->
+        <!--<script type="text/javascript" src="CoCreateMap_Direction.js"></script>-->
+        <!--<script type="text/javascript" src="CoCreateMap_Search.js"></script>-->
+        <!--<script type="text/javascript" src="index.js"></script>-->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script>
         <script type="text/javascript">
-            function initMapSettings() {
-                var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
-                var coCreateMapDirection = new CoCreateMapDirection();
-                initSortableSettings(coCreateMapAutocomplete);
-            }
-            function initSortableSettings(coCreateMapAutocomplete) {
-                var observer = new MutationObserver(function(mutations){
-                    mutations.forEach(function(mutation){
-                        if (mutation.type == "childList" && mutation.target.classList.contains("Sortable") && mutation.target.classList.contains("waypoints") && mutation.addedNodes.length == 1) {
-                            var addedNode = mutation.addedNodes.item(0);
-                            var place_ids = addedNode.querySelectorAll("[data-place_id]");
-                            for (var place_id of place_ids) {
-                                place_id.setAttribute("data-place_id", addedNode.getAttribute("prefix"));
-                            }
-                            console.log(coCreateMapAutocomplete);
-                            coCreateMapAutocomplete.init();
-                        }
-                    });
-                });
-                var config = { attribute:false, childList: true, characterData: false, subtree: true };
+            // function initMapSettings() {
+            //     // var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
+            //     // var coCreateMapDirection = new CoCreateMapDirection();
+            //     initSortableSettings(CoCreateMapAutocomplete);
+            // }
+            // function initSortableSettings(coCreateMapAutocomplete) {
+            //     var observer = new MutationObserver(function(mutations){
+            //         mutations.forEach(function(mutation){
+            //             if (mutation.type == "childList" && mutation.target.classList.contains("Sortable") && mutation.target.classList.contains("waypoints") && mutation.addedNodes.length == 1) {
+            //                 var addedNode = mutation.addedNodes.item(0);
+            //                 var place_ids = addedNode.querySelectorAll("[data-place_id]");
+            //                 for (var place_id of place_ids) {
+            //                     place_id.setAttribute("data-place_id", addedNode.getAttribute("prefix"));
+            //                 }
+            //                 console.log(coCreateMapAutocomplete);
+            //                 coCreateMapAutocomplete.init();
+            //             }
+            //         });
+            //     });
+            //     var config = { attribute:false, childList: true, characterData: false, subtree: true };
                 
-                observer.observe(document.body, config);
-            }
+            //     observer.observe(document.body, config);
+            // }
         </script>
         <script>
         var config = {
@@ -157,9 +159,9 @@
           organization_Id: '5de0387b12e200ea63204d6c'
         }
         </script>
-        <script src="../CoCreate-map.js/CoCreate.min.js"></script>
+        <script src="../CoCreate.min.js"></script>
         <script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>
-        <script src="../CoCreate-map.js/sort/CoCreate-sort.js"></script>
+        <script src="../archive/CoCreate-map.js/sort/CoCreate-sort.js"></script>
     
     </body>
 </html>
