@@ -1,39 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Watching Position</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleet tracking</title>
+
+  <!--<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreateUI.min.css" type="text/css" />-->
+  <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 </head>
+
+<style>
+tbody > tr:hover {
+  background:#fafafa;  
+}
+th, td {
+  border-bottom: 1px solid #e0e0e0;
+  padding:10px;
+  text-align:left;
+}
+</style>
+
 <body>
     
-    
+
     <div data-geolocation="true"
          data-collection="users"
-         data-document_id="" 
+         data-document_id=""
          name="currentLocation"
          class="sessionUser_Id"
+         data-icon="optional field name in db"
+         data-icon_type="optional svg or png?"
+         data-icon_value="optional icon value in svg or png or binary? "
          data-read_value="false"
          data-map_id="0">
     </div>
-<!--
-    CoCreate.updateDocument({
-        collection: collection,
-        document_id: document_id,
-        data:{
-        	currentLocation: object,
-        },
-        element: “xxxx”,
-        metaData: "xxxx"
-    }),
-  -->
-    <div id="result">
-        <!--Position information will be inserted here-->
-    </div>
-    
-    <div id="map" class="google_map" data-map_id="0" style="width: 400px; height: 300px;"></div>
+        <!--data-document_id="5ee389873e956152355a3447" -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzSNLDpyVV2ae8vjIQ8fiQQhgYA5LaW3w&libraries=places"></script>
+<table class="width-100-percent margin-15px">
+    <thead>
+        <tr>
+            <th><h3>User Name</h3></th>
+            <th><h3>CurrentLocation</h3></th>
+            <th><h3>Document_id</h3></th>
+        </tr>
+    </thead>
+    <tbody class="template-wrapper"
+        data-fetch_collection="users"
+        data-fetch_name="" 
+        data-fetch_value="" 
+        data-fetch_count=""
+        data-search_type="or"
+        data-order_by="name" 
+        data-order_type="asc"
+        data-template_id="datatable"
+        data-pass_to="me1234">
+        
+        <tr class="template border-bottom">
+            <td class="name"><h4 data-pass_id="me1234" name="name">No Name</h4></td>
+            <td ><h4 data-pass_id="me1234" name="currentLocation">corrds</h4></td>
+            <td ><h4 data-pass_id="me1234" name="_id">Document_id</h4></td>
+        </tr>
+        
+    </tbody>
+</table>
+
+		<div data-template_id="datatable" 
+		  data-filter_name="currentLocation.coords"
+		  data-filter_operator="$geoWithin"
+		  data-filter_value="[ [-73, 40], 100 ]"
+		  data-value_type="raw"
+		  data-filter_type="$center">
+		</div>
+		  <!--data-filter_value="[ [-73, 40], 100 ]"-->
+		<!--  data-filter_value="[ [-73.92709975146482, 40.6969990195153],[-73.88944153689573, 40.70675942292492] ]"-->
+        
+        <input type="hidden" data-filter_name="currentLocation" data-filter_operator="$geoWithin" data-value_type="polygon" value="<coordinates>">
+
+    </div> 
+    
+      <input type="text"  class="floating-label" placeholder="Text" name="name" data-collection="users" data-document_id=""> 
+    
+      <input type="text" class="floating-label" placeholder="icon" name="icon" data-animator="icon">
+   
+    <input type="text"  >
+    <div id="map" class="google_map" data-map_id="0" style="width: 100%; height: 300px;"></div>
+
   
   <script>
     var config = {
@@ -41,12 +99,20 @@
       securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
       organization_Id: '5de0387b12e200ea63204d6c'
     }
+    //5ee2eae63e956152355a3446
   </script>
  
-  <script src="CoCreate.min.js"></script>
+<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+<!--<script src="./dist/CoCreate-maps.min.js"></script>-->
+<script src="./src/CoCreateMap.js"></script>
+<script src="./src/CoCreateMap_Autocomplete.js"></script>
+<script src="./src/CoCreateMap_Direction.js"></script>
+<script src="./src/CoCreateMap_Search.js"></script>
+<script src="./src/CoCreateMap_Animate.js"></script>
+<script src="./src/CoCreateMap_GetLocation.js"></script>
+<script src="./src/index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzSNLDpyVV2ae8vjIQ8fiQQhgYA5LaW3w&libraries=places&callback=initMapSettings"></script>
 
-<script src="./dist/CoCreateMap.min.js"></script>
-<!--<script src="CoCreateMap_Animate.js"></script>-->
-<!--<script src="CoCreateMap_GetLocation.js"></script>-->
 </body>
 </html>

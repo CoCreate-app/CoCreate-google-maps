@@ -17,13 +17,15 @@ var CoCreateMapGetLocation = function() {
             console.log("initialite map");
             this.showPosition();
         }
-        socket.on('updateDocument', (data) =>{
-            this.createAnimator(data.data.currentLocation);
+        CoCreateSocket.listen('updateDocument', (data) =>{
+            console.log(data);
+            if (data)
+                this.createAnimator(data.data.currentLocation, data.document_id, data.data.icon);
         });
     }
     
-    this.createAnimator = (position)=>{
-        this.ccMapAnimate.addAnimator('me',{'lat':position.coords.latitude,'lng':position.coords.longitude}) // sending data
+    this.createAnimator = (position, document_id, icon)=>{
+        this.ccMapAnimate.addAnimator(document_id,{'lat':position.coords.latitude,'lng':position.coords.longitude}, icon) // sending data
     }
 
     this.saveData =(position)=>{
@@ -31,16 +33,38 @@ var CoCreateMapGetLocation = function() {
             CoCreate.validateKeysJson(this.geolocation_html.dataset,['collection','document_id']);
             let collection = this.geolocation_html.dataset['collection'] || '';
             let document_id = this.geolocation_html.dataset['document_id'] || '';
-            if(collection != '' && document_id != ''){
-                console.log("Saved location in db")
-                CoCreate.updateDocument({
-                    collection: collection,
-                    document_id: document_id,
-                    data:{
-                    	currentLocation: this.getPositionAsJSon(position),
-                    }
-                });
+            // textinput to object
+            let icon = document.querySelector("input[data-animator='icon']").value;
+            console.log(icon);
+            if (icon) {
+                icon = JSON.parse(icon);
+            } else {
+                icon = this.icon;
             }
+            if(collection != '')
+                if (document_id != ''){
+                    console.log("Saved location in db", document_id);
+                    let obj = {
+                        collection: collection,
+                        document_id: document_id,
+                        data:{
+                        	currentLocation: this.getPositionAsJSon(position),
+                        	icon:icon
+                        }
+                    };
+                    console.log(obj);
+                    CoCreate.updateDocument(obj);
+                } else {
+                    document_id = CoCreate.createDocument({
+                        collection:collection,
+                        data:{
+                            currentLocation: this.getPositionAsJSon(position),
+                            icon:icon
+                        }
+                    });
+                    console.log(document_id);
+                    this.geolocation_html.setAttribute("data-document_id", document_id);
+                }
         }
         catch (e) {
             console.error(e); 
@@ -63,14 +87,16 @@ var CoCreateMapGetLocation = function() {
     }
     
     this.showLocation=(position) =>{
+        // console.log(this);
         // Check position has been changed or not before doing anything
         if(this.prevLat != position.coords.latitude || this.prevLong != position.coords.longitude){
             // Set previous location
             this.prevLat = position.coords.latitude;
             this.prevLong = position.coords.longitude;
+            // console.log(position);
             this.saveData(position);
             var positionInfo = "Your position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
-            document.getElementById("result").innerHTML = positionInfo;
+            // document.getElementById("result").innerHTML = positionInfo;
             
         }
     }

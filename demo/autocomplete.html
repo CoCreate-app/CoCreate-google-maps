@@ -4,7 +4,12 @@
         <meta charset="utf-8">
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="address.css"></style>
+        <style>
+            .google_map {
+                height: 300px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
     </head>
     <body>
         <div data-location_request="true" >
@@ -164,7 +169,7 @@
         <!--<script type="text/javascript" src="./src/CoCreateMap_GetLocation.js"></script>-->
         <!--<script type="text/javascript" src="./src/CoCreateMap_Search.js"></script>-->
         <!--<script type="text/javascript" src="./src/index.js"></script>-->
-        <script type="text/javascript" src="./dist/CoCreateMap.min.js"></script>
+        <script type="text/javascript" src="../dist/CoCreate-maps.min.js"></script>
         <script>
             var config = {
                 apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
@@ -172,7 +177,7 @@
                 organization_Id: '5de0387b12e200ea63204d6c'
             }
         </script>
-        <script type="text/javascript" src="../CoCreate.min.js"></script>
+        <script type="text/javascript" src="https://server.cocreate.app/js/CoCreate.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script>
     </body>
 </html>

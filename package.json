@@ -1,5 +1,5 @@
 {
-  "name": "CoCreateMap",
+  "name": "CoCreate-maps",
   "version": "0.1.149",
   "description": "CoCreatejs realtime CRUD using html5 data-attributes",
   "scripts": {
@@ -13,6 +13,7 @@
   "license": "",
   "dependencies": {
     "fs": "0.0.1-security",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "webpack-s3-uploader": "^1.3.3"
   }
 }

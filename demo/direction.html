@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./address.css"></style>
-        <link href="https://cdn.cocreate.app/CoCreate.min.css" rel="stylesheet">
+        <style>
+           .google_map {
+                height: 300px;
+            }
+        </style>
+        <link href="https://server.cocreate.app/css/CoCreate.min.css" rel="stylesheet">
 
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
@@ -33,6 +37,20 @@
                     </div>
                 </div>
                 <a data-clone_id="waypoint" class="cloneBtn noDrag" style="display: block">Add waypoint</a>
+                <div class="Sortable waypoints" data-group_name="Sort">
+                    <div id="waypoint1" class="template Sort">
+                        <div style="display:inline-block;width: calc(100% - 20px);">
+                            <div>
+                                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label_field" data-place_id="5" autocomplete="off">
+                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="5">
+                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="5">
+                            </div>
+                        </div>
+                        <span style="float:right;"><a data-clone_id="waypoint" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+                        <!--  -->
+                    </div>
+                </div>
+                <a data-clone_id="waypoint1" class="cloneBtn noDrag" style="display: block">Add waypoint</a>
                 <div>
                     <input type="text" data-map_autocomplete="true" data-direction="destination" data-map_id="0" data-place="address" placeholder="Destination" class="main-search floating-label_field" data-place_id="1" style="width:100%" autocomplete="off">
                     <input type="hidden" data-direction="destination" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="1">
@@ -121,7 +139,7 @@
                 <label>OptimizeWaypoint</label>
             </div>
             
-        <script type="text/javascript" src="./dist/CoCreateMap.min.js"></script>
+        <script type="text/javascript" src="../dist/CoCreate-maps.min.js"></script>
         <!--<script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>-->
         <!--<script type="text/javascript" src="CoCreateMap_Direction.js"></script>-->
         <!--<script type="text/javascript" src="CoCreateMap_Search.js"></script>-->
@@ -159,9 +177,8 @@
           organization_Id: '5de0387b12e200ea63204d6c'
         }
         </script>
-        <script src="../CoCreate.min.js"></script>
-        <script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>
-        <script src="../archive/CoCreate-map.js/sort/CoCreate-sort.js"></script>
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+        <!--<script src="https://server.cocreate.app/js/CoCreate-sort.js"></script>-->
     
     </body>
 </html>

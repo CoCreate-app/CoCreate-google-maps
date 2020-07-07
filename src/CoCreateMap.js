@@ -81,6 +81,11 @@ CoCreateMap.prototype = {
         let map_center = new google.maps.LatLng(latitude, longitude);
         this.__proto__.maps[map_id] = new google.maps.Map(
             document.querySelector(`.google_map[data-map_id='${map_id}']`), {center: map_center, zoom: zoom});
+        // console.log(this.__proto__.maps[map_id].__proto__.getBounds());
+        this.__proto__.maps[map_id].__proto__.bounds_changed = () => {
+            console.log([this.maps[map_id].getCenter().lng(), this.maps[map_id].getCenter().lat()]);
+            console.log([[this.maps[map_id].getBounds().Ua.i, this.maps[map_id].getBounds().Za.i], [this.maps[map_id].getBounds().Ua.j, this.maps[map_id].getBounds().Za.j]]);
+        };
         this.__proto__.markers[map_id] = [];
         this.__proto__.services[map_id] = new google.maps.places.PlacesService(this.maps[map_id]);
         if (markerInfo === undefined) {
