@@ -1,4 +1,4 @@
-# Realtime Admin CRM and CMS
+# CoCreate Maps
 HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
 
 ![CoCreate](https://cdn.cocreate.app/logo.png)

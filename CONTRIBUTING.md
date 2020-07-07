@@ -1,19 +1,19 @@
-# Contributing to CoCreateJS
+# Contributing to CoCreate Maps
 
-This project is work of [many contributors](https://github.com/CoCreate-app/CoCreate-map/graphs/contributors).
-You're encouraged to submit [pull requests](https://github.com/CoCreate-app/CoCreate-map/pulls),
-[propose features and discuss issues](https://github.com/CoCreate-app/CoCreate-map/issues).
+This project is work of [many contributors](https://github.com/CoCreate-app/CoCreate-maps/graphs/contributors).
+You're encouraged to submit [pull requests](https://github.com/CoCreate-app/CoCreate-maps/pulls),
+[propose features and discuss issues](https://github.com/CoCreate-app/CoCreate-maps/issues).
 
 In the examples below, substitute your Github username for `contributor` in URLs.
 
 ## Fork the Project
 
-Fork the [project on Github](https://github.com/CoCreate-app/CoCreateJS) and check out your copy.
+Fork the [project on Github](https://github.com/CoCreate-app/CoCreate-maps) and check out your copy.
 
 ```
-git clone https://github.com/contributor/CoCreateJS.git
-cd CoCreateJS
-git remote add upstream https://github.com/CoCreate-app/CoCreateJS.git
+git clone https://github.com/contributor/CoCreate-maps.git
+cd CoCreate-maps
+git remote add upstream https://github.com/CoCreate-app/CoCreate-maps.git
 ```
 
 ## Create a Topic Branch
@@ -79,7 +79,7 @@ git push origin my-feature-branch
 
 ## Make a Pull Request
 
-Go to [https://github.com/CoCreate-app/CoCreate-map](https://github.com/CoCreate-app/CoCreate-map) and select your feature branch.
+Go to [https://github.com/CoCreate-app/CoCreate-maps](https://github.com/CoCreate-app/CoCreate-maps) and select your feature branch.
 Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 ## Rebase
@@ -97,7 +97,7 @@ git push origin my-feature-branch -f
 Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
 
 ```
-* [#123](https://github.com/CoCreate-app/CoCreate-map/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
+* [#123](https://github.com/CoCreate-app/CoCreate-maps/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
 ```
 
 Amend your previous commit and force push the changes.
