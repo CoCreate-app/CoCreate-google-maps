@@ -23,7 +23,7 @@ var options = {
     },
     output: {
         beautify: false,
-        preamble: "/* CoCreateMap */"
+        preamble: "/* CoCreate-maps */"
     }
 };
 

@@ -1,13 +1,13 @@
 # CoCreate Maps
-HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
+Easily apply and configure Google Maps by levaraing HTML5 data attributes. Search, places direction and realtime animation for fleet tracking. Easily configures to your use case 
 
 ![CoCreate](https://cdn.cocreate.app/logo.png)
 
 [CoCreate Docs](https://cocreate.app/documentation)
 
-**This repository shows an example of CoCreteJS being used to power this crm, cms admin panel**
+**This repository contains CoCrete Maps**
 
-We want this library to be community-driven, and CoCreate led. We need your help to realize this goal. To help make sure we are building the right things in the right order, we ask that you create [issues](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/issues) and [pull requests](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/pulls) or merely upvote or comment on existing issues or pull requests.
+We want this library to be community-driven, and CoCreate led. We need your help to realize this goal. To help make sure we are building the right things in the right order, we ask that you create [issues](https://github.com/CoCreate-app/CoCreate-maps/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-maps/pulls) or merely upvote or comment on existing issues or pull requests.
 
 We appreciate your continued support, thank you!
 
@@ -30,7 +30,7 @@ This library is broken up into several packages as a monorepo so that you only n
 <a name="announcements"></a>
 # Announcements
 
-All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-map/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email for releases and breaking changes. 
+All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-maps/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email for releases and breaking changes. 
 
 <a name="modules"></a>
 # Modules and Plugins
@@ -47,7 +47,7 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 <a name="roadmap"></a>
 # Roadmap
 
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-map/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-map/pulls). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-maps/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-maps/pulls). We would love to hear your feedback.
 
 
 <a name="about"></a>
@@ -62,7 +62,7 @@ CoCreateJS is maintained and funded by CoCreate. The names and logos for CoCreat
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-map/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-maps/blob/master/CONTRIBUTING.md) guide for details.
 
 # License
-[The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-map/blob/master/LICENSE)
+[The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-maps/blob/master/LICENSE)
