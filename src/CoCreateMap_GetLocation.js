@@ -83,6 +83,10 @@ var CoCreateMapGetLocation = function() {
                 speed: position.coords.speed,
             },
             timestamp: position.timestamp,
+            geoLocation:  {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,                
+            }
         };
     }
     
