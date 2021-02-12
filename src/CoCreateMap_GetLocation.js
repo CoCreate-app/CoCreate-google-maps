@@ -53,9 +53,9 @@ var CoCreateMapGetLocation = function() {
                         }
                     };
                     console.log(obj);
-                    CoCreate.updateDocument(obj);
+                    CoCreate.crud.updateDocument(obj);
                 } else {
-                    document_id = CoCreate.createDocument({
+                    document_id = CoCreate.crud.createDocument({
                         collection:collection,
                         data:{
                             currentLocation: this.getPositionAsJSon(position),
