@@ -1,19 +1,39 @@
 {
-  "name": "CoCreate-maps",
-  "version": "0.1.149",
-  "description": "CoCreatejs realtime CRUD using html5 data-attributes",
+  "name": "@cocreate/google-maps",
+  "version": "1.0.0",
+  "description": "A simple google-maps component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "keywords": ["google-maps","cocreate","low-code-framework","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "npx webpack --config webpack.config.js --watch",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js",
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CoCreate-app/CoCreate-maps.js"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-google-maps.git"
   },
-  "author": "Frankie Pagan",
-  "license": "",
+  "author": "CoCreate LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-google-maps/issues"
+  },
+  "homepage": "https://cocreate.app/docs/google-maps",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.14.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-log": "^3.0.1"
+  },
+
   "dependencies": {
-    "fs": "0.0.1-security",
-    "uglify-es": "^3.3.9",
-    "webpack-s3-uploader": "^1.3.3"
+    "@cocreate/docs": "^1.0.3"
   }
 }
