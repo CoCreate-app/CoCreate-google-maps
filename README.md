@@ -9,7 +9,7 @@ A simple google-maps component in vanilla javascript. Easily configured using HT
 
 ![CoCreate-google-maps](https://cdn.cocreate.app/docs/CoCreate-google-maps.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/google-maps)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/google-maps)
 
