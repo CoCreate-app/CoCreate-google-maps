@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.5...v1.0.6) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([3cda406](https://github.com/CoCreate-app/CoCreate-google-maps/commit/3cda4062f6ff3b2961fd3f4ab04c988a0af540b2))
+
 ## [1.0.5](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.4...v1.0.5) (2021-04-27)
 
 
