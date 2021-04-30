@@ -10,7 +10,7 @@ module.exports = {
             "path": "./docs/index.html",
             "collection": "files",
             "document_id": "60283a7771064611a678a1a5",
-            "key": "html",
+            "key": "src",
             "data":{
                 "name": "google-maps Doc",
                 "domains": ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
