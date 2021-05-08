@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.6...v1.0.7) (2021-05-08)
+
+
+### Bug Fixes
+
+* add css auto parse and save to docs. ([f5bea5b](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f5bea5b1265dd58e44fa3c7a83990db2d93a0bf4))
+
 ## [1.0.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.5...v1.0.6) (2021-04-27)
 
 
