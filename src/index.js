@@ -20,7 +20,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
         });
     });
     var config = { attribute:false, childList: true, characterData: false, subtree: true };
-    
+
     observer.observe(document.body, config);
 }
 
@@ -33,7 +33,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 	modules: {},
 // 	newModules: {},
 // 	observer: null,
-	
+
 // 	/**
 // 	 * key: module name
 // 	 * instance: module instance (ex, CoCreateInput or window)
@@ -48,7 +48,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 			instance: instance
 // 		}
 // 	},
-	
+
 // 	init: function() {
 // 		if (this.observer) {
 // 			return ;
@@ -61,10 +61,10 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 			const config = { attribute:false, childList: true, characterData: false, subtree: true };
 // 			this.observer.observe(document.body, config);
 // 		} catch (error) {
-			
+
 // 		}
 // 	},
-	
+
 // 	registerModules : function (key, instance, initFunc) {
 // 		if (this.newModules[key]) {
 // 			return;
@@ -74,14 +74,14 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 			instance: instance
 // 		}
 // 	},
-	
+
 // 	runInit: function(container) {
 // 		console.log(this.newModules, container)
 // 		for (let [key, value] of Object.entries(this.newModules)) {
 // 			value['func'].call(value['instance'], container);
 // 		}
 // 	},
-	
+
 // 	mutationLogic: function(mutations) {
 // 		const self = this;
 // 		console.log('mutations event.....');
@@ -91,11 +91,11 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 				if (!self.modules) {
 // 					return;
 // 				}
-				
-// 		    if (!addedNode.querySelectorAll || !addedNode.getAttribute) { 
+
+// 		    if (!addedNode.querySelectorAll || !addedNode.getAttribute) {
 // 		      return;
 // 		    }
-				
+
 // 				for (let [key, value] of Object.entries(self.modules)) {
 // 					value['func'].call(value['instance'], addedNode);
 // 					// let items = addedNode.querySelectorAll(value['selector']);
@@ -121,7 +121,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 		try{
 // 			observer = new MutationObserver(function(mutations){
 // 					mutations.forEach(function(mutation){
-// 					if (mutation.type == "childList" 
+// 					if (mutation.type == "childList"
 // 						&& mutation.addedNodes.length == 1) {
 // 						var addedNode = mutation.addedNodes.item(0);
 // 							console.log(addedNode)
@@ -131,7 +131,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 								list = addedNode.querySelectorAll(selector);
 // 							}catch (error) {
 // 								console.log(error);
-// 							} 
+// 							}
 // 							list.forEach(elem=>{
 // 								console.log("Init Element with Observer ",elem)
 // 								functionInit(elem);
@@ -146,5 +146,5 @@ function initSortableSettings(coCreateMapAutocomplete) {
 // 		}
 // 		return observer;
 // 	}
-	
+
 // }
