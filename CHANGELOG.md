@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.7...v1.0.8) (2021-06-06)
+
+
+### Bug Fixes
+
+* update packages, add uuid, add data-parse to demos ([878e6a9](https://github.com/CoCreate-app/CoCreate-google-maps/commit/878e6a9188476c0f3987fec2b5e7a40b68d4887f))
+* update packages, add uuid, add data-parse to demos ([dccfc15](https://github.com/CoCreate-app/CoCreate-google-maps/commit/dccfc15c71b3918079272abca95901f474a29d2d))
+
 ## [1.0.7](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.6...v1.0.7) (2021-05-08)
 
 
