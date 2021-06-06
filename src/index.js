@@ -1,9 +1,27 @@
+import CoCreateMapAutocomplete from './autocomplete'
+import CoCreateMapDirection from './direction'
+import CoCreateMapSearch from './search'
+import CoCreateMapGetLocation from './location'
+/*const CoCreateMapAutocomplete = require('./autocomplete');*/
+
+// const CoCreateMaps = {
+//     ...CoCreateMapAutocomplete,
+//     ...coCreateMapDirection,
+//     ...coCreateMapGetserach,
+//     ...coCreateMapGetLocation
+// }
+
+
 function initMapSettings() {
+    
+    console.log(" ...... ")
     var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
     var coCreateMapDirection = new CoCreateMapDirection();
     var coCreateMapSearch = new CoCreateMapSearch();
     var coCreateMapGetLocation = new CoCreateMapGetLocation();
-    initSortableSettings(coCreateMapAutocomplete);
+    initSortableSettings(coCreateMapGetLocation);
+    
+
 }
 function initSortableSettings(coCreateMapAutocomplete) {
     var observer = new MutationObserver(function(mutations){
@@ -24,4 +42,4 @@ function initSortableSettings(coCreateMapAutocomplete) {
     observer.observe(document.body, config);
 }
 
-
+export {CoCreateMaps,initMapSettings,initSortableSettings}
