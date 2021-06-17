@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.8...v1.0.9) (2021-06-17)
+
+
+### Bug Fixes
+
+* added header for seo ([7f431f9](https://github.com/CoCreate-app/CoCreate-google-maps/commit/7f431f9a0b6d46ff6f6253f9dd8b8aa2b92ae4c4))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.7...v1.0.8) (2021-06-06)
 
 
