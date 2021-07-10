@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.14...v1.0.15) (2021-07-10)
+
+
+### Bug Fixes
+
+* gitignore all logs ([a9aa9ff](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a9aa9ffe4cb16a9323dd5aa13d665fb682fe8961))
+
 ## [1.0.14](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.13...v1.0.14) (2021-06-30)
 
 
