@@ -1,3 +1,11 @@
+## [1.0.16](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.15...v1.0.16) (2021-07-13)
+
+
+### Bug Fixes
+
+* add yarn lockfile to git ignore ([40de479](https://github.com/CoCreate-app/CoCreate-google-maps/commit/40de479b0aad4535550fd72bf4ea469fca002a67))
+* remove yarn.lock ([195420f](https://github.com/CoCreate-app/CoCreate-google-maps/commit/195420fec0958043aabfae3da54b354686da37ae))
+
 ## [1.0.15](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.14...v1.0.15) (2021-07-10)
 
 
