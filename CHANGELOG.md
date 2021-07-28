@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.18...v1.1.0) (2021-07-28)
+
+
+### Features
+
+* add new is{attribute} system and remove data- from attributtes ([05579f9](https://github.com/CoCreate-app/CoCreate-google-maps/commit/05579f9af9afd042e186ac645740b577b0c4abbf))
+
 ## [1.0.18](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.17...v1.0.18) (2021-07-17)
 
 
