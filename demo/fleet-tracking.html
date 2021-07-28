@@ -52,36 +52,36 @@ th, td {
         </tr>
     </thead>
     <tbody class="template-wrapper"
-        data-fetch_collection="users"
-        data-fetch_name="" 
+        fetch-collection="users"
+        fetch-name="" 
         data-fetch_value="" 
         data-fetch_count=""
         data-search_type="or"
-        data-order_by="name" 
-        data-order_type="asc"
-        data-template_id="datatable"
-        data-pass_to="me1234">
+        order-by="name" 
+        order-type="asc"
+        template_id="datatable"
+        pass_to="me1234">
         
         <tr class="template border-bottom">
-            <td class="name"><h4 data-pass_id="me1234" name="name">No Name</h4></td>
-            <td ><h4 data-pass_id="me1234" name="currentLocation">corrds</h4></td>
-            <td ><h4 data-pass_id="me1234" name="_id">Document_id</h4></td>
+            <td class="name"><h4 pass_id="me1234" name="name">No Name</h4></td>
+            <td ><h4 pass_id="me1234" name="currentLocation">corrds</h4></td>
+            <td ><h4 pass_id="me1234" name="_id">Document_id</h4></td>
         </tr>
         
     </tbody>
 </table>
 
-		<div data-template_id="datatable" 
-		  data-filter_name="currentLocation.coords"
-		  data-filter_operator="$geoWithin"
-		  data-filter_value="[ [-73, 40], 100 ]"
+		<div template_id="datatable" 
+		  filter-name="currentLocation.coords"
+		  filter-operator="$geoWithin"
+		  filter-value="[ [-73, 40], 100 ]"
 		  data-value_type="raw"
-		  data-filter_type="$center">
+		  filter-type="$center">
 		</div>
-		<!-- data-filter_type="$center" data-filter_value="[ [-73, 40], 100 ]"-->
-		<!-- data-filter_type="$box" data-filter_value="[ [-73.92709975146482, 40.6969990195153],[-73.88944153689573, 40.70675942292492] ]"-->
+		<!-- filter-type="$center" filter-value="[ [-73, 40], 100 ]"-->
+		<!-- filter-type="$box" filter-value="[ [-73.92709975146482, 40.6969990195153],[-73.88944153689573, 40.70675942292492] ]"-->
         
-        <input type="hidden" data-filter_name="currentLocation" data-filter_operator="$geoWithin" data-value_type="polygon" value="<coordinates>">
+        <input type="hidden" filter-name="currentLocation" filter-operator="$geoWithin" data-value_type="polygon" value="<coordinates>">
 
     </div> 
     
