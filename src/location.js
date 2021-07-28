@@ -65,7 +65,7 @@ var CoCreateMapGetLocation = function() {
                         }
                     });
                     console.log(document_id);
-                    this.geolocation_html.setAttribute("data-document_id", document_id);
+                    this.geolocation_html.setAttribute("document_id", document_id);
                 }
         }
         catch (e) {
