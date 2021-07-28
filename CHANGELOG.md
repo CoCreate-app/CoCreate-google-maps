@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.0...v1.1.1) (2021-07-28)
+
+
+### Bug Fixes
+
+* remove data- from fetch, pass and filter ([20a6835](https://github.com/CoCreate-app/CoCreate-google-maps/commit/20a683579e085807b412d42d1f9827757528cedd))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.0.18...v1.1.0) (2021-07-28)
 
 
