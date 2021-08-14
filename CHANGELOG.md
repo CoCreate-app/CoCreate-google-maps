@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.2...v1.1.3) (2021-08-14)
+
+
+### Bug Fixes
+
+* remove data- from dnd attributes ([dbdeb6c](https://github.com/CoCreate-app/CoCreate-google-maps/commit/dbdeb6c6d4583858acc103fdb7d18bad88e15ec7))
+* update to  docs ([65d4a36](https://github.com/CoCreate-app/CoCreate-google-maps/commit/65d4a36e5b27714aa7a5214d5e6ed57c1eea15a7))
+
 ## [1.1.2](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.1...v1.1.2) (2021-08-02)
 
 
