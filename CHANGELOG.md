@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.5...v1.1.6) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([7a3ce00](https://github.com/CoCreate-app/CoCreate-google-maps/commit/7a3ce000e3dd507bbaa15e864af520578ccfcde1))
+
 ## [1.1.5](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.4...v1.1.5) (2021-08-22)
 
 
