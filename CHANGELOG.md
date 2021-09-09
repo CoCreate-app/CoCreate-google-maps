@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.11...v1.1.12) (2021-09-09)
+
+
+### Bug Fixes
+
+* CoCreate.config directory, path, name and  public ([006a831](https://github.com/CoCreate-app/CoCreate-google-maps/commit/006a83160a044496f50b84bbdec735300f64ed5c))
+
 ## [1.1.11](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.10...v1.1.11) (2021-09-08)
 
 
