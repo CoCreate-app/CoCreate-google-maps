@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.15...v1.1.16) (2021-09-12)
+
+
+### Bug Fixes
+
+* update sidenav to use resize and toggle ([2802afc](https://github.com/CoCreate-app/CoCreate-google-maps/commit/2802afc38c08a41eb38a18f08e26d0d3aacad6bc))
+
 ## [1.1.15](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.14...v1.1.15) (2021-09-09)
 
 
