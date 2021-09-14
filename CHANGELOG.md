@@ -1,3 +1,10 @@
+## [1.1.18](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.17...v1.1.18) (2021-09-14)
+
+
+### Bug Fixes
+
+* add cocreate.app to domains ([9c7d871](https://github.com/CoCreate-app/CoCreate-google-maps/commit/9c7d871c66497b645ea13d9c3b9f9f3dc1131256))
+
 ## [1.1.17](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.16...v1.1.17) (2021-09-13)
 
 
