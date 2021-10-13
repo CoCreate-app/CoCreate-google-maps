@@ -1,3 +1,10 @@
+## [1.1.28](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.27...v1.1.28) (2021-10-13)
+
+
+### Bug Fixes
+
+* update descriptions ([f8078bd](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f8078bd9df45a59e78c51420497138dfc1aff37d))
+
 ## [1.1.27](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.26...v1.1.27) (2021-10-13)
 
 
