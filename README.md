@@ -1,6 +1,6 @@
 # CoCreate-google-maps
 
-A simple google-maps component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/google-maps)
+A simple google-maps component in vanilla javascript. Easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/google-maps)
 
 ![minified](https://img.badgesize.io/https://cdn.cocreate.app/google-maps/latest/CoCreate-google-maps.min.js?style=flat-square&label=minified&color=orange)
 ![gzip](https://img.badgesize.io/https://cdn.cocreate.app/google-maps/latest/CoCreate-google-maps.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
