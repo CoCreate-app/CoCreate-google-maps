@@ -1,4 +1,4 @@
-// import CoCreateMap from './map'
+import {CoCreateMap} from './map.js';
 
 var CoCreateMapSearch = function() {
     // variables
@@ -207,6 +207,4 @@ var CoCreateMapSearch = function() {
 CoCreateMapSearch.prototype = Object.create(CoCreateMap.prototype);
 CoCreateMapSearch.prototype.constructor = CoCreateMapSearch;
 
-// functions for prototype
-
-// declaration
+export {CoCreateMapSearch}

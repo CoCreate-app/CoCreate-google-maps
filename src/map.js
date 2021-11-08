@@ -1,3 +1,16 @@
+// import { Loader } from "@googlemaps/js-api-loader";
+
+// const loader = new Loader({
+//   apiKey: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
+//   version: "weekly",
+// });
+
+// loader.load().then(() => {
+  
+// });
+
+
+
 var CoCreateMap = function(object) {
     
     // variables
@@ -212,3 +225,5 @@ function stripHtml(html) {
 function onlyUnique(value, index, self) { 
     return self.indexOf(value) === index;
 }
+
+export {CoCreateMap, onlyUnique, stripHtml};

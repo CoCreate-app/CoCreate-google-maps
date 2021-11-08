@@ -1,28 +1,30 @@
-import CoCreateMapAutocomplete from './autocomplete'
-import CoCreateMapDirection from './direction'
-import CoCreateMapSearch from './search'
-import CoCreateMapGetLocation from './location'
+import './map.js';
+import {CoCreateMapAutocomplete} from './autocomplete.js';
+import {CoCreateMapDirection} from './direction.js';
+import {CoCreateMapSearch} from './search.js';
+import {CoCreateMapGetLocation} from './location.js';
 /*const CoCreateMapAutocomplete = require('./autocomplete');*/
 
-// const CoCreateMaps = {
-//     ...CoCreateMapAutocomplete,
-//     ...coCreateMapDirection,
-//     ...coCreateMapGetserach,
-//     ...coCreateMapGetLocation
-// }
+// const loader = new Loader({
+//   apiKey: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
+//   version: "weekly",
+// });
 
+// loader.load().then(() => {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// });
 
 function initMapSettings() {
-    
-    console.log(" ...... ")
     var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
     var coCreateMapDirection = new CoCreateMapDirection();
     var coCreateMapSearch = new CoCreateMapSearch();
     var coCreateMapGetLocation = new CoCreateMapGetLocation();
     initSortableSettings(coCreateMapGetLocation);
-    
-
 }
+
 function initSortableSettings(coCreateMapAutocomplete) {
     var observer = new MutationObserver(function(mutations){
         mutations.forEach(function(mutation){
@@ -42,4 +44,6 @@ function initSortableSettings(coCreateMapAutocomplete) {
     observer.observe(document.body, config);
 }
 
-export {CoCreateMaps,initMapSettings,initSortableSettings}
+window.initMapSettings = initMapSettings()
+
+export {initMapSettings, initSortableSettings}

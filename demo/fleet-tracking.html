@@ -92,19 +92,15 @@ th, td {
     <input type="text"  >
     <div id="map" class="google_map" data-map_id="0" style="width: 100%; height: 300px;"></div>
 
-  <script>
-    var config = {
-      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-            organization_Id: '5de0387b12e200ea63204d6c'
-    }
-    //5ee2eae63e956152355a3446
-  </script>
- 
-<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-    
-<script type="text/javascript" src="../dist/CoCreateMap.min.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg&libraries=places&callback=initMapSettings"></script>
+        <script type="module">
+          import {initMapSettings} from '../src/index.js';
+          initMapSettings()
+        
+        </script>
+        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
+       
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
 
 </body>
 </html>

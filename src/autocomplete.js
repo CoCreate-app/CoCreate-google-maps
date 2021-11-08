@@ -1,4 +1,4 @@
-// import CoCreateMap from './map'
+import {CoCreateMap, onlyUnique, stripHtml} from './map.js';
 
 /* global CoCreateMap onlyUnique, google, stripHtml */
 var CoCreateMapAutocomplete = function() {
@@ -135,7 +135,4 @@ var CoCreateMapAutocomplete = function() {
 CoCreateMapAutocomplete.prototype = Object.create(CoCreateMap.prototype);
 CoCreateMapAutocomplete.prototype.constructor = CoCreateMapAutocomplete;
 
-/*export default CoCreateMapAutocomplete;*/
-// functions for prototype
-
-// declaration
+export {CoCreateMapAutocomplete};

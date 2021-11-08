@@ -1,4 +1,5 @@
-// import CoCreateMap from './map'
+import {CoCreateMap} from './map.js';
+import {CoCreateMapAnimate} from './animate.js';
 
 /*Class Custom*/
 
@@ -113,3 +114,5 @@ var CoCreateMapGetLocation = function() {
 CoCreateMapGetLocation.prototype = Object.create(CoCreateMapAnimate.prototype);
 CoCreateMapGetLocation.prototype.constructor = CoCreateMapGetLocation;
 // var CoCreateMapGetLocation = new CoCreateMapGetLocation();
+
+export {CoCreateMapGetLocation}

@@ -1,4 +1,4 @@
-// import CoCreateMap from './map'
+import {CoCreateMap} from './map.js';
 
 /* global CoCreateMap google */
 var CoCreateMapAnimate = function() {
@@ -211,3 +211,4 @@ CoCreateMapAnimate.prototype.constructor = CoCreateMapAnimate;
 // functions for prototype
 
 // declaration
+export {CoCreateMapAnimate};

@@ -139,45 +139,14 @@
                 <label>OptimizeWaypoint</label>
             </div>
             
-        <script type="text/javascript" src="../dist/CoCreate-maps.min.js"></script>
-        <!--<script type="text/javascript" src="CoCreateMap_Autocomplete.js"></script>-->
-        <!--<script type="text/javascript" src="CoCreateMap_Direction.js"></script>-->
-        <!--<script type="text/javascript" src="CoCreateMap_Search.js"></script>-->
-        <!--<script type="text/javascript" src="index.js"></script>-->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg&libraries=places&callback=initMapSettings" async defer></script>
-        <script type="text/javascript">
-            // function initMapSettings() {
-            //     // var coCreateMapAutocomplete = new CoCreateMapAutocomplete();
-            //     // var coCreateMapDirection = new CoCreateMapDirection();
-            //     initSortableSettings(CoCreateMapAutocomplete);
-            // }
-            // function initSortableSettings(coCreateMapAutocomplete) {
-            //     var observer = new MutationObserver(function(mutations){
-            //         mutations.forEach(function(mutation){
-            //             if (mutation.type == "childList" && mutation.target.classList.contains("Sortable") && mutation.target.classList.contains("waypoints") && mutation.addedNodes.length == 1) {
-            //                 var addedNode = mutation.addedNodes.item(0);
-            //                 var place_ids = addedNode.querySelectorAll("[data-place_id]");
-            //                 for (var place_id of place_ids) {
-            //                     place_id.setAttribute("data-place_id", addedNode.getAttribute("prefix"));
-            //                 }
-            //                 console.log(coCreateMapAutocomplete);
-            //                 coCreateMapAutocomplete.init();
-            //             }
-            //         });
-            //     });
-            //     var config = { attribute:false, childList: true, characterData: false, subtree: true };
-                
-            //     observer.observe(document.body, config);
-            // }
+        <script type="module">
+          import {initMapSettings} from '../src/index.js';
+          initMapSettings()
+        
         </script>
-        <script>
-        var config = {
-          apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-                    organization_Id: '5de0387b12e200ea63204d6c'
-        }
-        </script>
-        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-        <!--<script src="https://server.cocreate.app/js/CoCreate-sort.js"></script>-->
+        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
+       
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
     
     </body>
 </html>

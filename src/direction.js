@@ -1,4 +1,4 @@
-// import CoCreateMap from './map'
+import {CoCreateMap} from './map.js';
 
 var CoCreateMapDirection = function() {
     // variables
@@ -195,6 +195,7 @@ var CoCreateMapDirection = function() {
 CoCreateMapDirection.prototype = Object.create(CoCreateMap.prototype);
 CoCreateMapDirection.prototype.constructor = CoCreateMapDirection;
 
+export {CoCreateMapDirection};
 // functions for prototype
 
 
