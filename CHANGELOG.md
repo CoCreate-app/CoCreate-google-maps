@@ -1,3 +1,10 @@
+## [1.1.46](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.45...v1.1.46) (2021-11-20)
+
+
+### Bug Fixes
+
+* updated script tags and link tags ([2e26ccd](https://github.com/CoCreate-app/CoCreate-google-maps/commit/2e26ccd5bc5bd24f6fbf31a303cbe33045795af0))
+
 ## [1.1.45](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.44...v1.1.45) (2021-11-20)
 
 
