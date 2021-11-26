@@ -1,3 +1,10 @@
+## [1.1.49](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.48...v1.1.49) (2021-11-26)
+
+
+### Bug Fixes
+
+* docs sidenav width ([24bf8df](https://github.com/CoCreate-app/CoCreate-google-maps/commit/24bf8df837b62e0ad079b51531224fe1e945cbcb))
+
 ## [1.1.48](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.47...v1.1.48) (2021-11-26)
 
 
