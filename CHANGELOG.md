@@ -1,3 +1,10 @@
+## [1.1.55](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.54...v1.1.55) (2021-12-23)
+
+
+### Bug Fixes
+
+* renamed filter-value_type to filter-value-type ([a406cab](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a406cab0dc5c7236e72ba345e71dd155cde903c6))
+
 ## [1.1.54](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.53...v1.1.54) (2021-12-15)
 
 
