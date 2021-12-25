@@ -1,3 +1,10 @@
+## [1.1.56](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.55...v1.1.56) (2021-12-25)
+
+
+### Bug Fixes
+
+* removed  data-search_type=or ([7c28736](https://github.com/CoCreate-app/CoCreate-google-maps/commit/7c28736d0ad320efbd8edf3bd9f16264ef6dbd0c))
+
 ## [1.1.55](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.54...v1.1.55) (2021-12-23)
 
 
