@@ -1,3 +1,10 @@
+## [1.1.57](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.56...v1.1.57) (2022-01-01)
+
+
+### Bug Fixes
+
+* get-value attribute value now supports a selector added # to all values currently in get-value attributes ([09450e2](https://github.com/CoCreate-app/CoCreate-google-maps/commit/09450e25a27ac93a896e5ff992e61ac58fed5a87))
+
 ## [1.1.56](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.55...v1.1.56) (2021-12-25)
 
 
