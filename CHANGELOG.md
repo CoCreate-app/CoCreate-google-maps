@@ -1,3 +1,10 @@
+## [1.1.59](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.58...v1.1.59) (2022-02-03)
+
+
+### Bug Fixes
+
+* replaced show and hide class hidden with attribute hidden ([d93ac71](https://github.com/CoCreate-app/CoCreate-google-maps/commit/d93ac7170b20578067e61b1fdbf5f13d5450377c))
+
 ## [1.1.58](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.57...v1.1.58) (2022-02-01)
 
 
