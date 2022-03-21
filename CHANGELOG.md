@@ -1,3 +1,10 @@
+## [1.1.64](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.63...v1.1.64) (2022-03-21)
+
+
+### Bug Fixes
+
+* update class sortable to attribute sortable ([9e911b6](https://github.com/CoCreate-app/CoCreate-google-maps/commit/9e911b6a4510eab59930351214109520f975ee0c))
+
 ## [1.1.63](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.62...v1.1.63) (2022-02-24)
 
 
