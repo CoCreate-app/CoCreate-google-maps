@@ -1,3 +1,10 @@
+## [1.1.65](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.64...v1.1.65) (2022-05-06)
+
+
+### Bug Fixes
+
+* update config organization_Id to organization_id ([988a8d4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/988a8d455869375b6568570d7bf219d027942ea5))
+
 ## [1.1.64](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.63...v1.1.64) (2022-03-21)
 
 
