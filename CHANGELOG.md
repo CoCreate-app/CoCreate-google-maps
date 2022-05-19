@@ -1,3 +1,10 @@
+## [1.1.66](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.65...v1.1.66) (2022-05-19)
+
+
+### Bug Fixes
+
+* update document_id on link index.css ([ae265c4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/ae265c4e64bd375031c704696e1817a990bb29f4))
+
 ## [1.1.65](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.64...v1.1.65) (2022-05-06)
 
 
