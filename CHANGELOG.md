@@ -1,3 +1,10 @@
+## [1.1.70](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.69...v1.1.70) (2022-07-03)
+
+
+### Bug Fixes
+
+* update pass-fetch and pass-filter attributes ([e5cbff7](https://github.com/CoCreate-app/CoCreate-google-maps/commit/e5cbff7c608176426bfb0aeba8f37f1a6be6d69b))
+
 ## [1.1.69](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.68...v1.1.69) (2022-06-18)
 
 
