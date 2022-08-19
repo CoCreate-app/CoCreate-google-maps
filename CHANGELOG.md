@@ -1,3 +1,10 @@
+## [1.1.71](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.70...v1.1.71) (2022-08-19)
+
+
+### Bug Fixes
+
+* renamed order-by and order-type to filter-order-name and filter-order-type ([0db3c62](https://github.com/CoCreate-app/CoCreate-google-maps/commit/0db3c62aba573bfd0481ca97c559470ba40a386d))
+
 ## [1.1.70](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.69...v1.1.70) (2022-07-03)
 
 
