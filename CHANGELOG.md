@@ -1,3 +1,10 @@
+## [1.1.73](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.72...v1.1.73) (2022-09-29)
+
+
+### Bug Fixes
+
+* config renameed to CoCreateConfig ([d87d046](https://github.com/CoCreate-app/CoCreate-google-maps/commit/d87d046d05c20329d630ae35f61d87d861bbbdf3))
+
 ## [1.1.72](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.71...v1.1.72) (2022-09-01)
 
 
