@@ -39,7 +39,7 @@ function initSortableSettings(coCreateMapAutocomplete) {
             }
         });
     });
-    var config = { attribute:false, childList: true, characterData: false, subtree: true };
+    var CoCreateConfig = { attribute:false, childList: true, characterData: false, subtree: true };
 
     observer.observe(document.body, config);
 }
