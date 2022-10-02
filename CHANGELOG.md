@@ -1,3 +1,10 @@
+## [1.1.79](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.78...v1.1.79) (2022-10-02)
+
+
+### Bug Fixes
+
+* bump @cocreate/hosting and @cocreate/socket-client ([61376de](https://github.com/CoCreate-app/CoCreate-google-maps/commit/61376de09eec2913c08457d9afba6f4bbb4074c7))
+
 ## [1.1.78](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.77...v1.1.78) (2022-10-01)
 
 
