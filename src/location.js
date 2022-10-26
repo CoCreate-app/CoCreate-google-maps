@@ -49,8 +49,8 @@ var CoCreateMapGetLocation = function() {
                     console.log("Saved location in db", document_id);
                     let obj = {
                         collection: collection,
-                        document_id: document_id,
-                        data:{
+                        data: {
+                            _id: document_id,
                         	currentLocation: this.getPositionAsJSon(position),
                         	icon:icon
                         }
