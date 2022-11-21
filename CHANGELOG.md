@@ -1,3 +1,10 @@
+## [1.1.84](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.83...v1.1.84) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([1efad5a](https://github.com/CoCreate-app/CoCreate-google-maps/commit/1efad5aa576e2e86c68095eb2b6e41cc7ac569cc))
+
 ## [1.1.83](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.82...v1.1.83) (2022-11-21)
 
 
