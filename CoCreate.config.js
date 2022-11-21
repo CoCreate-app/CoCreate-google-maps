@@ -10,7 +10,7 @@ module.exports = {
             "collection": "files",
             "document_id": "60283a7771064611a678a1a5",
             "key": "src",
-            "data":{
+            "document": {
                 "name": "index.html",
                 "path": "/docs/google-maps/index.html",
                 "domains": [
