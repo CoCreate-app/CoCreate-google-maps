@@ -1,3 +1,11 @@
+## [1.1.81](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.80...v1.1.81) (2022-11-21)
+
+
+### Bug Fixes
+
+* filter-order attributes renamed to filter-sort ([66b64dd](https://github.com/CoCreate-app/CoCreate-google-maps/commit/66b64ddc4f8b41d9a0ae244d7c11da4997cd523a))
+* update crud functions to receive an array of objects as the response ([ea70692](https://github.com/CoCreate-app/CoCreate-google-maps/commit/ea70692ef029e9a533b5cf6e8d5b5757e250ef0a))
+
 ## [1.1.80](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.79...v1.1.80) (2022-10-02)
 
 
