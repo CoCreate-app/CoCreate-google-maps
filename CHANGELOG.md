@@ -1,3 +1,11 @@
+## [1.1.86](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.85...v1.1.86) (2022-11-22)
+
+
+### Bug Fixes
+
+* apply src: {{source}} to CoCreate.config ([1da6074](https://github.com/CoCreate-app/CoCreate-google-maps/commit/1da6074e1f8ed973116936bee4af06307eae1c86))
+* workflow docs ([526e1de](https://github.com/CoCreate-app/CoCreate-google-maps/commit/526e1de01e7d1734cc58314dac59dc524671a77e))
+
 ## [1.1.85](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.84...v1.1.85) (2022-11-21)
 
 
