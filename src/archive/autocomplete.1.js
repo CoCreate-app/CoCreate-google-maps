@@ -56,7 +56,7 @@ var CoCreateMapAutocomplete = function() {
             autocomplete_item.forEach(function(element, j){
                 let autocomplete;
                 let place_type = element.dataset.place;
-                // if(Object.keys(place_type_json).indexOf(place_type)!=-1)
+                // if (Object.keys(place_type_json).indexOf(place_type)!=-1)
                 if (place_type_json[place_type] !== undefined) autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:[place_type_json[place_type]]});
                 /*if (place_type == "address") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['address']});
                 if (place_type == "administrative_area_level_2") autocomplete = new google.maps.places.Autocomplete(autocomplete_item.item(j), {types:['(cities)']});

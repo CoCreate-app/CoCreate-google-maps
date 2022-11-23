@@ -12,11 +12,11 @@ var CoCreateMapGetLocation = function() {
     this.geolocation_html = null;
     
     this.init = ()=>{
-        if(!this.ccMapAnimate){
+        if (!this.ccMapAnimate){
             this.ccMapAnimate = new CoCreateMapAnimate();
         }
         this.geolocation_html = document.querySelector("["+this.attr+"]");
-        if(this.geolocation_html && this.geolocation_html.getAttribute(this.attr)=='true'){
+        if (this.geolocation_html && this.geolocation_html.getAttribute(this.attr)=='true'){
             console.log("initialite map");
             this.showPosition();
         }
@@ -44,7 +44,7 @@ var CoCreateMapGetLocation = function() {
             } else {
                 icon = this.icon;
             }
-            if(collection != '')
+            if (collection != '')
                 if (document_id != ''){
                     console.log("Saved location in db", document_id);
                     let obj = {
@@ -96,7 +96,7 @@ var CoCreateMapGetLocation = function() {
     this.showLocation=(position) =>{
         // console.log(this);
         // Check position has been changed or not before doing anything
-        if(this.prevLat != position.coords.latitude || this.prevLong != position.coords.longitude){
+        if (this.prevLat != position.coords.latitude || this.prevLong != position.coords.longitude){
             // Set previous location
             this.prevLat = position.coords.latitude;
             this.prevLong = position.coords.longitude;

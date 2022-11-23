@@ -78,12 +78,12 @@ CoCreateMap.prototype = {
         }
     },
     errHandler: function(err) {
-        if(err.code == 1)
+        if (err.code == 1)
             for (let map of this.mapDivs) {
                 let mapInfo = new MapInfo(map.dataset.map_id);
                 this.renderMap(mapInfo);
             }
-        else if(err.code == 2)
+        else if (err.code == 2)
             alert("Error: Position is unavailable!");
     },
     renderMap: function(mapInfo, markerInfo) {
