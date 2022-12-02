@@ -1,3 +1,12 @@
+## [1.1.94](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.93...v1.1.94) (2022-12-02)
+
+
+### Bug Fixes
+
+* bump dependencies ([919c2da](https://github.com/CoCreate-app/CoCreate-google-maps/commit/919c2dad9bf38943233054bb5ac1d7fb188bb61f))
+* docs ([8af77d0](https://github.com/CoCreate-app/CoCreate-google-maps/commit/8af77d02e701f65b43c3d0f4af085ccb535246f1))
+* renamed filter-sort-type to filter-sort-direction ([ac3554b](https://github.com/CoCreate-app/CoCreate-google-maps/commit/ac3554b60ceeb15b63178f75a9eb152cd5dde99d))
+
 ## [1.1.93](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.92...v1.1.93) (2022-11-28)
 
 
