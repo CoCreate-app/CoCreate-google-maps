@@ -1,3 +1,10 @@
+## [1.1.103](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.102...v1.1.103) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([9b348f5](https://github.com/CoCreate-app/CoCreate-google-maps/commit/9b348f5de92dde1628cfe3d922f734aca893caeb))
+
 ## [1.1.102](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.101...v1.1.102) (2022-12-13)
 
 
