@@ -1,3 +1,10 @@
+## [1.1.112](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.111...v1.1.112) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config sources to use template  braces with entry on src ([4a6cd07](https://github.com/CoCreate-app/CoCreate-google-maps/commit/4a6cd0756e6eaaf0ca19196a651d615432f6a0aa))
+
 ## [1.1.111](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.110...v1.1.111) (2022-12-29)
 
 
