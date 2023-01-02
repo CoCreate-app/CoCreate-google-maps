@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.114...v1.2.0) (2023-01-02)
+
+
+### Features
+
+* class="template" template_id="id" replaced with template="id" ([01cec56](https://github.com/CoCreate-app/CoCreate-google-maps/commit/01cec561f9d6bb3c9080dcb9576a0edd324c6aee))
+
 ## [1.1.114](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.1.113...v1.1.114) (2023-01-01)
 
 
