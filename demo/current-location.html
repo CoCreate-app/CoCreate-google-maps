@@ -51,9 +51,8 @@ th, td {
             <th><h3>Document_id</h3></th>
         </tr>
     </thead>
-    <tbody class="template-wrapper"
-        fetch-collection="users"
-        fetch-name="" 
+    <tbody fetch-collection="users"
+        filter-name="" 
         filter-value="" 
         fetch-limit=""
        
@@ -62,7 +61,7 @@ th, td {
         template_id="datatable"
         pass_to="me1234">
         
-        <tr class="template border-bottom">
+        <tr template="datatable" class="border-bottom">
             <td class="name"><h4 pass_id="me1234" name="name">No Name</h4></td>
             <td ><h4 pass_id="me1234" name="currentLocation">corrds</h4></td>
             <td ><h4 pass_id="me1234" name="_id">Document_id</h4></td>
