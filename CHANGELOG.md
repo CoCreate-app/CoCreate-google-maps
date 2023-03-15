@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.2.10...v1.2.11) (2023-03-15)
+
+
+### Bug Fixes
+
+* actions object renamed to endPoints ([53f34d2](https://github.com/CoCreate-app/CoCreate-google-maps/commit/53f34d2e3b498659ee7018d7bc520877a96f4086))
+
 ## [1.2.10](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.2.9...v1.2.10) (2023-02-01)
 
 
