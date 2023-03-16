@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.2.11...v1.3.0) (2023-03-16)
+
+
+### Features
+
+* replaced get-value and set-value with a super charged version of CoCreate-events ([064b4bd](https://github.com/CoCreate-app/CoCreate-google-maps/commit/064b4bd642d7dff737e454f7af45a208c2466c05))
+
 ## [1.2.11](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.2.10...v1.2.11) (2023-03-15)
 
 
