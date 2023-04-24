@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.3.6...v1.4.0) (2023-04-24)
+
+
+### Features
+
+* added pwa manifest ([eac7ec5](https://github.com/CoCreate-app/CoCreate-google-maps/commit/eac7ec5425e5d8252f5ccb819a7f95a97d2f1689))
+
 ## [1.3.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.3.5...v1.3.6) (2023-04-11)
 
 
