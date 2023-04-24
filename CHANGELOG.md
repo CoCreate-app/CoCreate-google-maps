@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.0...v1.4.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* removed uglifyjs-webpack-plugin ([34be036](https://github.com/CoCreate-app/CoCreate-google-maps/commit/34be03671694eff10d239072294401ac9167a523))
+
 # [1.4.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.3.6...v1.4.0) (2023-04-24)
 
 
