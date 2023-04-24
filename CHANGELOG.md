@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.3...v1.4.4) (2023-04-24)
+
+
+### Bug Fixes
+
+* updated worrkflows to v3 and node version 16 ([a3c4f85](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a3c4f854469d2525df256d094e41c045cd1bb559))
+
 ## [1.4.3](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.2...v1.4.3) (2023-04-24)
 
 
