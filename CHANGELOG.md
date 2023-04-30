@@ -1,3 +1,13 @@
+## [1.4.5](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.4...v1.4.5) (2023-04-30)
+
+
+### Bug Fixes
+
+* fullscreen target updated to fullscreen fullscreen-target ([39bf299](https://github.com/CoCreate-app/CoCreate-google-maps/commit/39bf29982b150ef669bb785c5a1fc3e3ca534f03))
+* package-lock.json and pnpm-lock.yaml added to .gitignore ([fecea8e](https://github.com/CoCreate-app/CoCreate-google-maps/commit/fecea8e07707f85dd095cd6986a5df222babb185))
+* removed toogle fullscreen icons. now using css content ([eb47648](https://github.com/CoCreate-app/CoCreate-google-maps/commit/eb476488a832814a1f188331b91371b91c2185d7))
+* replaced sessionUser and sessionOrg with localstorage attributes ([0cb3b22](https://github.com/CoCreate-app/CoCreate-google-maps/commit/0cb3b22c4b6b75ebf2aecbe1269c4c1afd92be86))
+
 ## [1.4.4](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.3...v1.4.4) (2023-04-24)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/google-maps",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "A simple google-maps component in vanilla javascript. Easily configured using HTML5 attributes and/or JavaScript API.",
   "keywords": [
     "google-maps",
