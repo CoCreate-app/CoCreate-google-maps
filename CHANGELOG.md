@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.5...v1.4.6) (2023-05-01)
+
+
+### Bug Fixes
+
+* replace fontawesome with svg ([0728d84](https://github.com/CoCreate-app/CoCreate-google-maps/commit/0728d84d1f2af58383eddf6883502a1aca18df07))
+
 ## [1.4.5](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.4...v1.4.5) (2023-04-30)
 
 
