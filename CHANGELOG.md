@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.6...v1.4.7) (2023-05-01)
+
+
+### Bug Fixes
+
+* update manifest.json to manifest.webmanifest ([f2a933e](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f2a933edc70b48690c9f588a2a6a77e3a8f8542c))
+
 ## [1.4.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.5...v1.4.6) (2023-05-01)
 
 
