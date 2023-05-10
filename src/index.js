@@ -6,7 +6,7 @@ import {CoCreateMapGetLocation} from './location.js';
 /*const CoCreateMapAutocomplete = require('./autocomplete');*/
 
 // const loader = new Loader({
-//   apiKey: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
+//   key: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
 //   version: "weekly",
 // });
 

@@ -1,7 +1,7 @@
 // import { Loader } from "@googlemaps/js-api-loader";
 
 // const loader = new Loader({
-//   apiKey: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
+//   key: "AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg",
 //   version: "weekly",
 // });
 
