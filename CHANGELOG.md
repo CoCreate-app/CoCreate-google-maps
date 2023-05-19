@@ -1,3 +1,12 @@
+## [1.4.9](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.8...v1.4.9) (2023-05-19)
+
+
+### Bug Fixes
+
+* apikey renamed to key ([10ffdce](https://github.com/CoCreate-app/CoCreate-google-maps/commit/10ffdced5557e2ec74278ec9b17a45540687d072))
+* apikey renamed to key ([e2a130f](https://github.com/CoCreate-app/CoCreate-google-maps/commit/e2a130fd4bdca368e1567f48d9d5ebd1ed8ecea4))
+* update packages to latest version. This commit updates various packages in the dependencies section of the package.json file to their latest published versions, thereby fixing multiple bugs and improving overall performance. ([015853a](https://github.com/CoCreate-app/CoCreate-google-maps/commit/015853abb490dfe9936b37b99e9cd3202b890732))
+
 ## [1.4.8](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.7...v1.4.8) (2023-05-06)
 
 
