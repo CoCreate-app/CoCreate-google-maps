@@ -1,50 +1,119 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
     <body>
         <div data-location_request="true">
-        <div class="google_map" id="map" style="height:300px;" data-map_id="0"></div>
-        <div>
-            <input type="text" data-option_attribute="query" data-map_id="0"/>
-            <button class="search" data-map_id="0">Search</button>
-        </div>
-        <div>
-            <input type="radio" data-map_id="0" name="searchType" data-option_attribute="searchType" value="searchFromQuery" checked/>findPlaceFromQuery<br>
-            <input type="radio" data-map_id="0" name="searchType" data-option_attribute="searchType" value="searchFromPhoneNumber"/>findPlaceFromPhoneNumber<br>
-            <input type="radio" data-map_id="0" name="searchType" data-option_attribute="searchType" value="searchNearBy"/>nearbySearch<br>
-            <input type="radio" data-map_id="0" name="searchType" data-option_attribute="searchType" value="searchText"/>textSearch<br>
-            <!--<input type="checkbox" name="fields" data-option_attribute="fields" value="All"/>Fields(All)<br>-->
+            <div
+                class="google_map"
+                id="map"
+                style="height: 300px"
+                data-map_id="0"></div>
+            <div>
+                <input
+                    type="text"
+                    data-option_attribute="query"
+                    data-map_id="0" />
+                <button class="search" data-map_id="0">Search</button>
+            </div>
+            <div>
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="searchType"
+                    data-option_attribute="searchType"
+                    value="searchFromQuery"
+                    checked />findPlaceFromQuery<br />
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="searchType"
+                    data-option_attribute="searchType"
+                    value="searchFromPhoneNumber" />findPlaceFromPhoneNumber<br />
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="searchType"
+                    data-option_attribute="searchType"
+                    value="searchNearBy" />nearbySearch<br />
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="searchType"
+                    data-option_attribute="searchType"
+                    value="searchText" />textSearch<br />
+                <!--<input type="checkbox" name="fields" data-option_attribute="fields" value="All"/>Fields(All)<br>-->
 
-            <input type="radio" data-map_id="0" name="locationBias" data-option_attribute="locationBias" value="LatLngBounds" checked/>LatLngBounds<br>
-            <input type="radio" data-map_id="0" name="locationBias" data-option_attribute="locationBias" value="Radius"/>Radius<br>
-            <input type="radio" data-map_id="0" name="locationBias" data-option_attribute="locationBias" value="LatLng"/>LatLng(only for find from query or phone number)<br>
-            <p>Coodinate & Radius</p>
-            Latitude<input type="text" data-map_id="0" data-option_attribute="latitude"/><br>
-            Longitude<input type="text" data-map_id="0" data-option_attribute="longitude"/><br>
-            Radius<input type="text" data-map_id="0" data-option_attribute="radius"/><br>
-            <p></p>
-            MinPriceLevel<input type="text" data-map_id="0" data-option_attribute="minPriceLevel"/><br>
-            MaxPriceLevel<input type="text" data-map_id="0" data-option_attribute="maxPriceLevel"/><br>
-            Name<input type="text" data-map_id="0" data-option_attribute="name"/><br>
-            <input type="checkbox" data-map_id="0" data-option_attribute="openNow"/>OpenNow<br>
-            <input type="checkbox" data-map_id="0" data-option_attribute="rankBy"/>RankByDistance<br>
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="locationBias"
+                    data-option_attribute="locationBias"
+                    value="LatLngBounds"
+                    checked />LatLngBounds<br />
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="locationBias"
+                    data-option_attribute="locationBias"
+                    value="Radius" />Radius<br />
+                <input
+                    type="radio"
+                    data-map_id="0"
+                    name="locationBias"
+                    data-option_attribute="locationBias"
+                    value="LatLng" />LatLng(only for find from query or phone
+                number)<br />
+                <p>Coodinate &amp; Radius</p>
+                Latitude<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="latitude" /><br />
+                Longitude<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="longitude" /><br />
+                Radius<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="radius" /><br />
+                <p></p>
+                MinPriceLevel<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="minPriceLevel" /><br />
+                MaxPriceLevel<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="maxPriceLevel" /><br />
+                Name<input
+                    type="text"
+                    data-map_id="0"
+                    data-option_attribute="name" /><br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-option_attribute="openNow" />OpenNow<br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-option_attribute="rankBy" />RankByDistance<br />
+            </div>
         </div>
-            
+
         <script type="module">
-          import {initMapSettings} from '../src/index.js';
-          initMapSettings()
-        
+            import { initMapSettings } from "../src/index.js";
+            initMapSettings();
         </script>
-        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
-       
+        <script
+            type="text/javascript"
+            src="../dist/CoCreate-google-maps.js"></script>
+
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
         <!--<script type="text/javascript" src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
-        
-    
     </body>
 </html>
