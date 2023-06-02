@@ -1,105 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Fleet tracking</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fleet tracking</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css"
+            type="text/css" />
 
-  
-  <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
-  
-  
-  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/99ba925095.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous" />
 
-    <link rel="manifest" href="/manifest.webmanifest">
-</head>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-<style>
-tbody > tr:hover {
-  background:#fafafa;  
-}
-th, td {
-  border-bottom: 1px solid #e0e0e0;
-  padding:10px;
-  text-align:left;
-}
-</style>
+    <style>
+        tbody > tr:hover {
+            background: #fafafa;
+        }
+        th,
+        td {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
 
-<body>
-    
-
-    <div data-geolocation="true"
-         collection="users"
-         document_id="{{userId}}"
-         name="currentLocation"
-         data-icon="optional field name in db"
-         data-icon_type="optional svg or png?"
-         data-icon_value="optional icon value in svg or png or binary? "
-         read="false"
-         data-map_id="0" localstorage-get="user_id" localstorage-key="userId">
-    </div>
+    <body>
+        <div
+            data-geolocation="true"
+            collection="users"
+            document_id="{{userId}}"
+            name="currentLocation"
+            data-icon="optional field name in db"
+            data-icon_type="optional svg or png?"
+            data-icon_value="optional icon value in svg or png or binary? "
+            read="false"
+            data-map_id="0"
+            localstorage-get="user_id"
+            localstorage-key="userId"></div>
         <!--document_id="5ee389873e956152355a3447" -->
 
-<table class="width:100% margin:15px">
-    <thead>
-        <tr>
-            <th><h3>User Name</h3></th>
-            <th><h3>CurrentLocation</h3></th>
-            <th><h3>Document_id</h3></th>
-        </tr>
-    </thead>
-    <tbody fetch-collection="users"
-        fetch-name="" 
-        filter-value="" 
-        fetch-limit=""
-       
-        filter-sort-name="name" 
-        filter-sort-direction="asc"
-        template_id="datatable"
-        pass_to="me1234">
-        
-        <tr template="datatable" class="border-bottom">
-            <td class="name"><h4 pass_id="me1234" name="name">No Name</h4></td>
-            <td ><h4 pass_id="me1234" name="currentLocation">corrds</h4></td>
-            <td ><h4 pass_id="me1234" name="_id">Document_id</h4></td>
-        </tr>
-        
-    </tbody>
-</table>
+        <table class="width:100% margin:15px">
+            <thead>
+                <tr>
+                    <th><h3>User Name</h3></th>
+                    <th><h3>CurrentLocation</h3></th>
+                    <th><h3>Document_id</h3></th>
+                </tr>
+            </thead>
+            <tbody
+                fetch-collection="users"
+                fetch-name=""
+                filter-value=""
+                fetch-limit=""
+                filter-sort-name="name"
+                filter-sort-direction="asc"
+                template_id="datatable"
+                pass_to="me1234">
+                <tr template="datatable" class="border-bottom">
+                    <td class="name">
+                        <h4 pass_id="me1234" name="name">No Name</h4>
+                    </td>
+                    <td>
+                        <h4 pass_id="me1234" name="currentLocation">corrds</h4>
+                    </td>
+                    <td><h4 pass_id="me1234" name="_id">Document_id</h4></td>
+                </tr>
+            </tbody>
+        </table>
 
-		<div template_id="datatable" 
-		  filter-name="currentLocation.coords"
-		  filter-operator="$geoWithin"
-		  filter-value="[ [-73, 40], 100 ]"
-		  filter-value-type="raw"
-		  filter-type="$center">
-		</div>
-		<!-- filter-type="$center" filter-value="[ [-73, 40], 100 ]"-->
-		<!-- filter-type="$box" filter-value="[ [-73.92709975146482, 40.6969990195153],[-73.88944153689573, 40.70675942292492] ]"-->
-        
-        <input type="hidden" filter-name="currentLocation" filter-operator="$geoWithin" filter-value-type="polygon" value="<coordinates>">
+        <div
+            template_id="datatable"
+            filter-name="currentLocation.coords"
+            filter-operator="$geoWithin"
+            filter-value="[ [-73, 40], 100 ]"
+            filter-value-type="raw"
+            filter-type="$center"></div>
+        <!-- filter-type="$center" filter-value="[ [-73, 40], 100 ]"-->
+        <!-- filter-type="$box" filter-value="[ [-73.92709975146482, 40.6969990195153],[-73.88944153689573, 40.70675942292492] ]"-->
 
-    </div> 
-    
-      <input type="text"  class="floating-label" placeholder="Text" name="name" collection="users" document_id=""> 
-    
-      <input type="text" class="floating-label" placeholder="icon" name="icon" data-animator="icon">
-   
-    <input type="text"  >
-    <div id="map" class="google_map" data-map_id="0" style="width: 100%; height: 300px;"></div>
+        <input
+            type="hidden"
+            filter-name="currentLocation"
+            filter-operator="$geoWithin"
+            filter-value-type="polygon"
+            value="<coordinates>" />
 
+        <input
+            type="text"
+            class="floating-label"
+            placeholder="Text"
+            name="name"
+            collection="users"
+            document_id="" />
+
+        <input
+            type="text"
+            class="floating-label"
+            placeholder="icon"
+            name="icon"
+            data-animator="icon" />
+
+        <input type="text" />
+        <div
+            id="map"
+            class="google_map"
+            data-map_id="0"
+            style="width: 100%; height: 300px"></div>
 
         <script type="module">
-          import {initMapSettings} from '../src/index.js';
-          initMapSettings()
-        
+            import { initMapSettings } from "../src/index.js";
+            initMapSettings();
         </script>
-        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
-       
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
+        <script
+            type="text/javascript"
+            src="../dist/CoCreate-google-maps.js"></script>
 
-</body>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
+    </body>
 </html>

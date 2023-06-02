@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
@@ -9,157 +9,331 @@
                 height: 300px;
             }
         </style>
-        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="stylesheet"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
     <body>
-        <div data-location_request="true" >
+        <div data-location_request="true">
             <table>
                 <tbody>
                     <tr>
                         <td>Establishment</td>
                         <td colspan="3">
-                            <input type="text" data-map_autocomplete="true" data-place="establishment" data-map_id="0" placeholder="Establishment" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="establishment"
+                                data-map_id="0"
+                                placeholder="Establishment"
+                                class="main-search"
+                                data-place_id="0"
+                                style="width: 100%"
+                                autocomplete="off" />
                         </td>
                     </tr>
                     <tr>
                         <td>Address 1</td>
                         <td colspan="3">
-                            <input type="text" data-map_autocomplete="true" data-place="address" data-map_id="0" placeholder="Address" class="main-search" data-place_id="0" style="width:100%" autocomplete="off">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="address"
+                                data-map_id="0"
+                                placeholder="Address"
+                                class="main-search"
+                                data-place_id="0"
+                                style="width: 100%"
+                                autocomplete="off" />
                         </td>
                     </tr>
                     <tr>
                         <td>City</td>
                         <td>
-                            <input class="main-search" data-map_autocomplete="true" type="text" data-map_id="0" data-place="administrative_area_level_2" placeholder="City" data-place_id="0" autocomplete="off">
+                            <input
+                                class="main-search"
+                                data-map_autocomplete="true"
+                                type="text"
+                                data-map_id="0"
+                                data-place="administrative_area_level_2"
+                                placeholder="City"
+                                data-place_id="0"
+                                autocomplete="off" />
                         </td>
                         <td>Region / Country</td>
                         <td>
-                            <input type="text" data-map_autocomplete="true" data-place="region_country" data-map_id="0" placeholder="Region / Country" data-place_id="0" autocomplete="off">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="region_country"
+                                data-map_id="0"
+                                placeholder="Region / Country"
+                                data-place_id="0"
+                                autocomplete="off" />
                         </td>
                     </tr>
                     <tr>
                         <td>Location</td>
                         <td>
-                            <input type="text" data-place="location" data-map_id="0" placeholder="Location" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="location"
+                                data-map_id="0"
+                                placeholder="Location"
+                                data-place_id="0" />
                         </td>
                         <td>Route</td>
                         <td>
-                            <input type="text" data-place="route" data-map_id="0" placeholder="Route" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="route"
+                                data-map_id="0"
+                                placeholder="Route"
+                                data-place_id="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>Street Number</td>
                         <td>
-                            <input type="text"  data-place="street_number" data-map_id="0" data-place_value_type="short_name" placeholder="Street Number" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="street_number"
+                                data-map_id="0"
+                                data-place_value_type="short_name"
+                                placeholder="Street Number"
+                                data-place_id="0" />
                         </td>
                         <td>Postal Code</td>
                         <td>
-                            <input type="text" data-place="postal_code" data-map_id="0" data-place_value_type="short_name" placeholder="Postal Code" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="postal_code"
+                                data-map_id="0"
+                                data-place_value_type="short_name"
+                                placeholder="Postal Code"
+                                data-place_id="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>Locality</td>
                         <td>
-                            <input type="text"  data-place="locality" data-map_id="0" placeholder="Locality" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="locality"
+                                data-map_id="0"
+                                placeholder="Locality"
+                                data-place_id="0" />
                         </td>
                         <td>Country Code</td>
                         <td>
-                            <input type="text"   data-place="country_code" data-place_value_type="short_name" data-map_id="0" placeholder="Country Code" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="country_code"
+                                data-place_value_type="short_name"
+                                data-map_id="0"
+                                placeholder="Country Code"
+                                data-place_id="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>State</td>
                         <td>
-                            <input type="text"  data-place="administrative_area_level_1" placeholder="State" data-map_id="0" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="administrative_area_level_1"
+                                placeholder="State"
+                                data-map_id="0"
+                                data-place_id="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>Latitude</td>
                         <td>
-                            <input type="text" data-place="latitude" data-map_id="0" placeholder="Latitude" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="latitude"
+                                data-map_id="0"
+                                placeholder="Latitude"
+                                data-place_id="0" />
                         </td>
                         <td>Longitude</td>
                         <td>
-                            <input type="text" data-place="longitude" data-map_id="0" placeholder="Longitude" data-place_id="0">
+                            <input
+                                type="text"
+                                data-place="longitude"
+                                data-map_id="0"
+                                placeholder="Longitude"
+                                data-place_id="0" />
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div class="google_map" data-map_id="0" data-place_id="0" data-map_lng data-map_lat data-map_zoom data-travel_mode></div>
+            <div
+                class="google_map"
+                data-map_id="0"
+                data-place_id="0"
+                data-map_lng
+                data-map_lat
+                data-map_zoom
+                data-travel_mode></div>
             <table>
                 <tbody>
                     <tr>
                         <td>Establishment</td>
                         <td colspan="3">
-                            <input type="text" data-map_autocomplete="true" data-place="establishment" data-map_id="1" placeholder="Establishment" class="main-search" data-place_id="1" style="width:100%">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="establishment"
+                                data-map_id="1"
+                                placeholder="Establishment"
+                                class="main-search"
+                                data-place_id="1"
+                                style="width: 100%" />
                         </td>
                     </tr>
                     <tr>
                         <td>Address 2</td>
                         <td colspan="3">
-                            <input type="text" data-map_autocomplete="true" data-place="address" data-map_id="1" placeholder="Address" class="main-search" data-place_id="1" style="width:100%">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="address"
+                                data-map_id="1"
+                                placeholder="Address"
+                                class="main-search"
+                                data-place_id="1"
+                                style="width: 100%" />
                         </td>
                     </tr>
                     <tr>
                         <td>City</td>
                         <td>
-                            <input type="text" data-map_autocomplete="true" data-place="administrative_area_level_2" data-map_id="1" placeholder="City" data-place_id="1">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="administrative_area_level_2"
+                                data-map_id="1"
+                                placeholder="City"
+                                data-place_id="1" />
                         </td>
                         <td>Region / Country</td>
                         <td>
-                            <input type="text" data-map_autocomplete="true" data-place="region_country" data-map_id="1" placeholder="Region / Country" data-place_id="1">
+                            <input
+                                type="text"
+                                data-map_autocomplete="true"
+                                data-place="region_country"
+                                data-map_id="1"
+                                placeholder="Region / Country"
+                                data-place_id="1" />
                         </td>
                     </tr>
                     <tr>
                         <td>Location</td>
                         <td>
-                            <input type="text" data-place="location" data-map_id="1" placeholder="Location" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="location"
+                                data-map_id="1"
+                                placeholder="Location"
+                                data-place_id="1" />
                         </td>
                         <td>Route</td>
                         <td>
-                            <input type="text" data-place="route" data-map_id="1" placeholder="Route" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="route"
+                                data-map_id="1"
+                                placeholder="Route"
+                                data-place_id="1" />
                         </td>
                     </tr>
                     <tr>
                         <td>Street Number</td>
                         <td>
-                            <input type="text"  data-place="street_number" data-map_id="1" data-place_value_type="short_name" placeholder="Street Number" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="street_number"
+                                data-map_id="1"
+                                data-place_value_type="short_name"
+                                placeholder="Street Number"
+                                data-place_id="1" />
                         </td>
                         <td>Postal Code</td>
                         <td>
-                            <input type="text" data-place="postal_code" data-map_id="1" data-place_value_type="short_name" placeholder="Postal Code" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="postal_code"
+                                data-map_id="1"
+                                data-place_value_type="short_name"
+                                placeholder="Postal Code"
+                                data-place_id="1" />
                         </td>
                     </tr>
                     <tr>
                         <td>Locality</td>
                         <td>
-                            <input type="text"  data-place="locality" data-map_id="1" placeholder="Locality" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="locality"
+                                data-map_id="1"
+                                placeholder="Locality"
+                                data-place_id="1" />
                         </td>
                         <td>Country Code</td>
                         <td>
-                            <input type="text"   data-place="country_code" data-map_id="1" data-place_value_type="short_name" placeholder="Country Code" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="country_code"
+                                data-map_id="1"
+                                data-place_value_type="short_name"
+                                placeholder="Country Code"
+                                data-place_id="1" />
                         </td>
                     </tr>
                     <tr>
                         <td>State</td>
                         <td>
-                            <input type="text"  data-place="administrative_area_level_1" data-map_id="1" placeholder="State" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="administrative_area_level_1"
+                                data-map_id="1"
+                                placeholder="State"
+                                data-place_id="1" />
                         </td>
                     </tr>
                     <tr>
                         <td>Latitude</td>
                         <td>
-                            <input type="text" data-place="latitude" placeholder="Latitude" data-map_id="1" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="latitude"
+                                placeholder="Latitude"
+                                data-map_id="1"
+                                data-place_id="1" />
                         </td>
                         <td>Longitude</td>
                         <td>
-                            <input type="text" data-place="longitude" placeholder="Longitude" data-map_id="1" data-place_id="1">
+                            <input
+                                type="text"
+                                data-place="longitude"
+                                placeholder="Longitude"
+                                data-map_id="1"
+                                data-place_id="1" />
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div class="google_map" data-map_id="1" data-place_id="1" data-map_lng data-map_lat data-map_zoom data-travel_mode></div>
+            <div
+                class="google_map"
+                data-map_id="1"
+                data-place_id="1"
+                data-map_lng
+                data-map_lat
+                data-map_zoom
+                data-travel_mode></div>
             <div data-location_request="true"></div>
             <button onclick="clearAll();">Clear</button>
         </div>
@@ -169,18 +343,17 @@
         <!--<script type="text/javascript" src="../src/direction.js"></script>-->
         <!--<script type="text/javascript" src="../src/location.js"></script>-->
         <!--<script type="text/javascript" src="../src/search.js"></script>-->
-         <!--<script type="module" src="../src/index.js"></script>-->
+        <!--<script type="module" src="../src/index.js"></script>-->
         <script type="module">
-          import {initMapSettings} from '../src/index.js';
-          initMapSettings()
-        
+            import { initMapSettings } from "../src/index.js";
+            initMapSettings();
         </script>
-        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
-       
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
-       
+        <script
+            type="text/javascript"
+            src="../dist/CoCreate-google-maps.js"></script>
 
-       
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
+
         <!--<script async-->
         <!--    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg=JP&language=ja&callback=initMapSettings">-->
         <!--</script>-->
