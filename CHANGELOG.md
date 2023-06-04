@@ -1,3 +1,10 @@
+## [1.4.14](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.13...v1.4.14) (2023-06-04)
+
+
+### Bug Fixes
+
+* Refactor CoCreate.config.js to remove hard-coded credentials ([7359f5e](https://github.com/CoCreate-app/CoCreate-google-maps/commit/7359f5eca94034f498339a2f6444d21d57c51055))
+
 ## [1.4.13](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.12...v1.4.13) (2023-06-04)
 
 
