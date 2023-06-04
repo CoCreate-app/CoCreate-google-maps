@@ -1,3 +1,10 @@
+## [1.4.12](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.11...v1.4.12) (2023-06-04)
+
+
+### Bug Fixes
+
+* **semantic-release:** worklow error solved by running node version 14 ([be09415](https://github.com/CoCreate-app/CoCreate-google-maps/commit/be09415f2a5fd91c4775b569c01379b98e906768))
+
 ## [1.4.11](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.10...v1.4.11) (2023-06-02)
 
 
