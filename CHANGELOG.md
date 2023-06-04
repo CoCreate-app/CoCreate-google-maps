@@ -1,3 +1,11 @@
+## [1.4.13](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.12...v1.4.13) (2023-06-04)
+
+
+### Bug Fixes
+
+* replaced secert GITHUB_TOKEN with GITHUB ([5fbe44f](https://github.com/CoCreate-app/CoCreate-google-maps/commit/5fbe44f4b0afad8b426e6f576c0b568a8036bf0f))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([6b98830](https://github.com/CoCreate-app/CoCreate-google-maps/commit/6b988308dd3a3ad01bbc42b771f88a3a107a6162))
+
 ## [1.4.12](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.11...v1.4.12) (2023-06-04)
 
 
