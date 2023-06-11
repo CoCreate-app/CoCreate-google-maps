@@ -1,3 +1,10 @@
+## [1.4.17](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.16...v1.4.17) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed hosts to host. the value can be a string or an array of strings ([129d9a4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/129d9a420ee1afe4f91834c4853cd94b97efe3cb))
+
 ## [1.4.16](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.15...v1.4.16) (2023-06-10)
 
 
