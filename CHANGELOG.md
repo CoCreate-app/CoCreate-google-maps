@@ -1,3 +1,10 @@
+## [1.4.19](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.18...v1.4.19) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([569a452](https://github.com/CoCreate-app/CoCreate-google-maps/commit/569a4524296d93884a316080755b45ff8ce7f35b))
+
 ## [1.4.18](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.17...v1.4.18) (2023-06-11)
 
 
