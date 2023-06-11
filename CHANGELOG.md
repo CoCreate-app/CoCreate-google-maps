@@ -1,3 +1,11 @@
+## [1.4.22](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.21...v1.4.22) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([001b9b0](https://github.com/CoCreate-app/CoCreate-google-maps/commit/001b9b0f268f5475e9f1d52d0e6565c0ada7f7c3))
+* testing workflow ([ed4c952](https://github.com/CoCreate-app/CoCreate-google-maps/commit/ed4c95242c880dad58d6312fe4c8258b10470204))
+
 ## [1.4.21](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.20...v1.4.21) (2023-06-11)
 
 
