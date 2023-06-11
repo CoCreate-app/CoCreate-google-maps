@@ -58,7 +58,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/cli": "^1.33.4",
+    "@cocreate/cli": "^1.33.6",
     "@googlemaps/js-api-loader": "^1.12.8"
   }
 }
