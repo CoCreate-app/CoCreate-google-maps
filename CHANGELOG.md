@@ -1,3 +1,11 @@
+## [1.4.20](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.19...v1.4.20) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([923c876](https://github.com/CoCreate-app/CoCreate-google-maps/commit/923c8765108d5565ad61b96a81e4b9bf47fb8cc2))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([f41a8ab](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f41a8ab936ab6187dd1a19439850442ab5fcb728))
+
 ## [1.4.19](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.18...v1.4.19) (2023-06-11)
 
 
