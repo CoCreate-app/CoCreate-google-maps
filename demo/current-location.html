@@ -57,15 +57,15 @@
                 </tr>
             </thead>
             <tbody
-                fetch-collection="users"
+                collection="users"
                 filter-name=""
                 filter-value=""
                 filter-limit=""
                 filter-sort-name="name"
                 filter-sort-direction="asc"
-                template_id="datatable"
-                pass_to="me1234">
-                <tr template="datatable" class="border-bottom">
+                pass_to="me1234"
+                render-selector="[template]">
+                <tr template>
                     <td class="name">
                         <h4 pass_id="me1234" name="name">No Name</h4>
                     </td>
