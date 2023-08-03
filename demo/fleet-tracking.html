@@ -36,8 +36,8 @@
     <body>
         <div
             data-geolocation="true"
-            collection="users"
-            document_id="{{userId}}"
+            array="users"
+            object="{{userId}}"
             name="currentLocation"
             data-icon="optional field name in db"
             data-icon_type="optional svg or png?"
@@ -46,7 +46,7 @@
             data-map_id="0"
             localstorage-get="user_id"
             localstorage-key="userId"></div>
-        <!--document_id="5ee389873e956152355a3447" -->
+        <!--object="5ee389873e956152355a3447" -->
 
         <table class="width:100% margin:15px">
             <thead>
@@ -57,7 +57,7 @@
                 </tr>
             </thead>
             <tbody
-                collection="users"
+                array="users"
                 name=""
                 filter-value=""
                 filter-limit=""
@@ -99,8 +99,8 @@
             class="floating-label"
             placeholder="Text"
             name="name"
-            collection="users"
-            document_id="" />
+            array="users"
+            object="" />
 
         <input
             type="text"

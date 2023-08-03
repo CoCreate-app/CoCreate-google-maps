@@ -4,8 +4,8 @@ module.exports = {
     "host": "",
     "sources": [
         {
-            "collection": "files",
-            "document": {
+            "array": "files",
+            "object": {
                 "_id": "60283a7771064611a678a1a5",
                 "name": "index.html",
                 "path": "/docs/google-maps/index.html",
