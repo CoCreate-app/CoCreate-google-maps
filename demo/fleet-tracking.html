@@ -38,7 +38,7 @@
             data-geolocation="true"
             array="users"
             object="{{userId}}"
-            name="currentLocation"
+            key="currentLocation"
             data-icon="optional field name in db"
             data-icon_type="optional svg or png?"
             data-icon_value="optional icon value in svg or png or binary? "
@@ -58,28 +58,28 @@
             </thead>
             <tbody
                 array="users"
-                name=""
+                key=""
                 filter-value=""
                 filter-limit=""
-                filter-sort-name="name"
+                filter-sort-key="name"
                 filter-sort-direction="asc"
                 template_id="datatable"
                 pass_to="me1234">
                 <tr template>
                     <td class="name">
-                        <h4 pass_id="me1234" name="name">No Name</h4>
+                        <h4 pass_id="me1234" key="name">No Name</h4>
                     </td>
                     <td>
-                        <h4 pass_id="me1234" name="currentLocation">corrds</h4>
+                        <h4 pass_id="me1234" key="currentLocation">corrds</h4>
                     </td>
-                    <td><h4 pass_id="me1234" name="_id">Document_id</h4></td>
+                    <td><h4 pass_id="me1234" key="_id">Document_id</h4></td>
                 </tr>
             </tbody>
         </table>
 
         <div
             template_id="datatable"
-            filter-name="currentLocation.coords"
+            filter-key="currentLocation.coords"
             filter-operator="$geoWithin"
             filter-value="[ [-73, 40], 100 ]"
             filter-value-type="raw"
@@ -89,7 +89,7 @@
 
         <input
             type="hidden"
-            filter-name="currentLocation"
+            filter-key="currentLocation"
             filter-operator="$geoWithin"
             filter-value-type="polygon"
             value="<coordinates>" />
@@ -98,7 +98,7 @@
             type="text"
             class="floating-label"
             placeholder="Text"
-            name="name"
+            key="name"
             array="users"
             object="" />
 
@@ -106,7 +106,7 @@
             type="text"
             class="floating-label"
             placeholder="icon"
-            name="icon"
+            key="icon"
             data-animator="icon" />
 
         <input type="text" />

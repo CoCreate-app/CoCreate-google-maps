@@ -1,152 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Google Search Autocomplete</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
-           .google_map {
+            .google_map {
                 height: 300px;
             }
         </style>
-        <link href="https://cdn.cocreate.app/latest/CoCreate.min.css" rel="stylesheet">
+        <link
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css"
+            rel="stylesheet" />
 
-            <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <script src="https://kit.fontawesome.com/99ba925095.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
     <body>
         <div data-location_request="true">
             <div>
                 <div>
-                    <input type="text" data-map_autocomplete="true" data-direction="origin" data-map_id="0" data-place="address" placeholder="Origin" class="main-search floating-label_field" data-place_id="0" autocomplete="off">
-                    <input type="hidden" data-direction="origin" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="0">
-                    <input type="hidden" data-direction="origin" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="0">
+                    <input
+                        type="text"
+                        data-map_autocomplete="true"
+                        data-direction="origin"
+                        data-map_id="0"
+                        data-place="address"
+                        placeholder="Origin"
+                        class="main-search floating-label_field"
+                        data-place_id="0"
+                        autocomplete="off" />
+                    <input
+                        type="hidden"
+                        data-direction="origin"
+                        data-map_id="0"
+                        data-place="longitude"
+                        placeholder="Longitude"
+                        data-place_id="0" />
+                    <input
+                        type="hidden"
+                        data-direction="origin"
+                        data-map_id="0"
+                        data-place="latitude"
+                        placeholder="Latitude"
+                        data-place_id="0" />
                 </div>
-                <div sortable class="waypoints" dnd-group-name="Sort">
+                <div sortable class="waypoints" dnd-group-key="Sort">
                     <div id="waypoint" class="template Sort">
-                        <div style="display:inline-block;width: calc(100% - 20px);">
+                        <div
+                            style="
+                                display: inline-block;
+                                width: calc(100% - 20px);
+                            ">
                             <div>
-                                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label_field" data-place_id="4" autocomplete="off">
-                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="4">
-                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="4">
+                                <input
+                                    type="text"
+                                    data-map_autocomplete="true"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="address"
+                                    placeholder="Waypoint"
+                                    class="main-search floating-label_field"
+                                    data-place_id="4"
+                                    autocomplete="off" />
+                                <input
+                                    type="hidden"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="longitude"
+                                    placeholder="Longitude"
+                                    data-place_id="4" />
+                                <input
+                                    type="hidden"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="latitude"
+                                    placeholder="Latitude"
+                                    data-place_id="4" />
                             </div>
                         </div>
-                        <span style="float:right;"><a clone_id="waypoint" class="deleteBtn noDrag"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></span>
+                        <span style="float: right"
+                            ><a clone_id="waypoint" class="deleteBtn noDrag"
+                                ><i
+                                    class="height:18px fill:#505050"
+                                    src="/assets/svg/times.svg"></i></a
+                        ></span>
                         <!--  -->
                     </div>
                 </div>
-                <a actions="clone" clone_id="waypoint" class="noDrag" style="display: block">Add waypoint</a>
-                <div sortable class="waypoints" dnd-group-name="Sort">
+                <a
+                    actions="clone"
+                    clone_id="waypoint"
+                    class="noDrag"
+                    style="display: block"
+                    >Add waypoint</a
+                >
+                <div sortable class="waypoints" dnd-group-key="Sort">
                     <div id="waypoint1" class="template Sort">
-                        <div style="display:inline-block;width: calc(100% - 20px);">
+                        <div
+                            style="
+                                display: inline-block;
+                                width: calc(100% - 20px);
+                            ">
                             <div>
-                                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label_field" data-place_id="5" autocomplete="off">
-                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="5">
-                                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="5">
+                                <input
+                                    type="text"
+                                    data-map_autocomplete="true"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="address"
+                                    placeholder="Waypoint"
+                                    class="main-search floating-label_field"
+                                    data-place_id="5"
+                                    autocomplete="off" />
+                                <input
+                                    type="hidden"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="longitude"
+                                    placeholder="Longitude"
+                                    data-place_id="5" />
+                                <input
+                                    type="hidden"
+                                    data-direction="waypoint"
+                                    data-map_id="0"
+                                    data-place="latitude"
+                                    placeholder="Latitude"
+                                    data-place_id="5" />
                             </div>
                         </div>
-                        <span style="float:right;"><a clone_id="waypoint" class="deleteBtn noDrag"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></span>
+                        <span style="float: right"
+                            ><a clone_id="waypoint" class="deleteBtn noDrag"
+                                ><i
+                                    class="height:18px fill:#505050"
+                                    src="/assets/svg/times.svg"></i></a
+                        ></span>
                         <!--  -->
                     </div>
                 </div>
-                <a clone_id="waypoint1" actions="clone" class="noDrag" style="display: block">Add waypoint</a>
+                <a
+                    clone_id="waypoint1"
+                    actions="clone"
+                    class="noDrag"
+                    style="display: block"
+                    >Add waypoint</a
+                >
                 <div>
-                    <input type="text" data-map_autocomplete="true" data-direction="destination" data-map_id="0" data-place="address" placeholder="Destination" class="main-search floating-label_field" data-place_id="1" style="width:100%" autocomplete="off">
-                    <input type="hidden" data-direction="destination" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="1">
-                    <input type="hidden" data-direction="destination" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="1">
+                    <input
+                        type="text"
+                        data-map_autocomplete="true"
+                        data-direction="destination"
+                        data-map_id="0"
+                        data-place="address"
+                        placeholder="Destination"
+                        class="main-search floating-label_field"
+                        data-place_id="1"
+                        style="width: 100%"
+                        autocomplete="off" />
+                    <input
+                        type="hidden"
+                        data-direction="destination"
+                        data-map_id="0"
+                        data-place="longitude"
+                        placeholder="Longitude"
+                        data-place_id="1" />
+                    <input
+                        type="hidden"
+                        data-direction="destination"
+                        data-map_id="0"
+                        data-place="latitude"
+                        placeholder="Latitude"
+                        data-place_id="1" />
                 </div>
             </div>
             <!--<button data-map_id="0" onclick="confirmDirection(this);">confirmDirection</button>-->
             <!--<button onclick="clearAll();">Clear</button>-->
             <div class="google_map" data-map_id="0"></div>
-            <div class="direction_option" data-map_id="0" data-autodirection="true">
+            <div
+                class="direction_option"
+                data-map_id="0"
+                data-autodirection="true">
                 <label>TravelMode</label>
-                <br>
-                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="DRIVING" checked>
+                <br />
+                <input
+                    type="radio"
+                    key="travel_mode"
+                    data-map_id="0"
+                    data-direction="travelMode"
+                    value="DRIVING"
+                    checked />
                 <label>DRIVING</label>
-                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="BICYCLING">
+                <input
+                    type="radio"
+                    key="travel_mode"
+                    data-map_id="0"
+                    data-direction="travelMode"
+                    value="BICYCLING" />
                 <label>BICYCLING</label>
-                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="TRANSIT">
+                <input
+                    type="radio"
+                    key="travel_mode"
+                    data-map_id="0"
+                    data-direction="travelMode"
+                    value="TRANSIT" />
                 <label>TRANSIT</label>
-                <input type="radio" name="travel_mode" data-map_id="0" data-direction="travelMode" value="WALKING">
+                <input
+                    type="radio"
+                    key="travel_mode"
+                    data-map_id="0"
+                    data-direction="travelMode"
+                    value="WALKING" />
                 <label>WALKING</label>
-                <br>
+                <br />
                 <label>TransitOption</label>
-                <br>
+                <br />
                 <div data-map_id="0" data-direction="transit_option">
                     <label>ArrivalTime</label>
-                    <input type="datetime-local" data-map_id="0" data-direction="arrivalTime" placeholder="Date" value="">
-                    <br>
+                    <input
+                        type="datetime-local"
+                        data-map_id="0"
+                        data-direction="arrivalTime"
+                        placeholder="Date"
+                        value="" />
+                    <br />
                     <label>DepartureTime</label>
-                    <input type="datetime-local" data-map_id="0" data-direction="t_departureTime" placeholder="Date" value="">
-                    <br>
+                    <input
+                        type="datetime-local"
+                        data-map_id="0"
+                        data-direction="t_departureTime"
+                        placeholder="Date"
+                        value="" />
+                    <br />
                     <label>TransitMode</label>
-                    <br>
-                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="BUS">
+                    <br />
+                    <input
+                        type="checkbox"
+                        key="transit_modes"
+                        data-map_id="0"
+                        data-direction="transit_modes"
+                        value="BUS" />
                     <label>BUS</label>
-                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="RAIL">
+                    <input
+                        type="checkbox"
+                        key="transit_modes"
+                        data-map_id="0"
+                        data-direction="transit_modes"
+                        value="RAIL" />
                     <label>RAIL</label>
-                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="SUBWAY">
+                    <input
+                        type="checkbox"
+                        key="transit_modes"
+                        data-map_id="0"
+                        data-direction="transit_modes"
+                        value="SUBWAY" />
                     <label>SUBWAY</label>
-                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="TRAIN">
+                    <input
+                        type="checkbox"
+                        key="transit_modes"
+                        data-map_id="0"
+                        data-direction="transit_modes"
+                        value="TRAIN" />
                     <label>TRAIN</label>
-                    <input type="checkbox" name="transit_modes" data-map_id="0" data-direction="transit_modes" value="TRAM">
+                    <input
+                        type="checkbox"
+                        key="transit_modes"
+                        data-map_id="0"
+                        data-direction="transit_modes"
+                        value="TRAM" />
                     <label>TRAM</label>
-                    <br>
+                    <br />
                     <label>RoutingPreference</label>
-                    <br>
-                    <input type="radio" name="routingPreference" data-map_id="0" data-direction="routingPreference" value="FEWER_TRANSFERS">
+                    <br />
+                    <input
+                        type="radio"
+                        key="routingPreference"
+                        data-map_id="0"
+                        data-direction="routingPreference"
+                        value="FEWER_TRANSFERS" />
                     <label>FEWER_TRANSFERS</label>
-                    <input type="radio" name="routingPreference" data-map_id="0" data-direction="routingPreference" value="LESS_WALKING">
+                    <input
+                        type="radio"
+                        key="routingPreference"
+                        data-map_id="0"
+                        data-direction="routingPreference"
+                        value="LESS_WALKING" />
                     <label>LESS_WALKING</label>
                 </div>
                 <label>DrivingOption</label>
-                <br>
+                <br />
                 <div data-direction="driving_option">
                     <label>DepartureTime</label>
-                    <input type="datetime-local" data-map_id="0" data-direction="d_departureTime" placeholder="Date" value="">
-                    <br>
+                    <input
+                        type="datetime-local"
+                        data-map_id="0"
+                        data-direction="d_departureTime"
+                        placeholder="Date"
+                        value="" />
+                    <br />
                     <label>TrafficModel</label>
-                    <br>
-                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="bestguess">
+                    <br />
+                    <input
+                        type="radio"
+                        key="trafficModel"
+                        data-map_id="0"
+                        data-direction="trafficModel"
+                        value="bestguess" />
                     <label>bestguess</label>
-                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="pessimistic">
+                    <input
+                        type="radio"
+                        key="trafficModel"
+                        data-map_id="0"
+                        data-direction="trafficModel"
+                        value="pessimistic" />
                     <label>pessimistic</label>
-                    <input type="radio" name="trafficModel" data-map_id="0" data-direction="trafficModel" value="optimistic">
+                    <input
+                        type="radio"
+                        key="trafficModel"
+                        data-map_id="0"
+                        data-direction="trafficModel"
+                        value="optimistic" />
                     <label>optimistic</label>
                 </div>
                 <label>UnitSystem</label>
-                <br>
-                <input type="radio" name="unit_system" data-map_id="0" data-direction="unitSystem" value="METRIC">
+                <br />
+                <input
+                    type="radio"
+                    key="unit_system"
+                    data-map_id="0"
+                    data-direction="unitSystem"
+                    value="METRIC" />
                 <label>METRIC</label>
-                <input type="radio" name="unit_system" data-map_id="0" data-direction="unitSystem" value="IMPERIAL">
+                <input
+                    type="radio"
+                    key="unit_system"
+                    data-map_id="0"
+                    data-direction="unitSystem"
+                    value="IMPERIAL" />
                 <label>IMPERIAL</label>
-                <br>
-                <input type="checkbox" data-map_id="0" data-direction="provideRouteAlternatives">
+                <br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-direction="provideRouteAlternatives" />
                 <label>ProvideRouteAlternatives</label>
-                <br>
-                <input type="checkbox" data-map_id="0" data-direction="avoidFerries">
+                <br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-direction="avoidFerries" />
                 <label>AvoidFerries</label>
-                <br>
-                <input type="checkbox" data-map_id="0" data-direction="avoidHighways">
+                <br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-direction="avoidHighways" />
                 <label>AvoidHighways</label>
-                <br>
-                <input type="checkbox" data-map_id="0" data-direction="avoidTolls">
+                <br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-direction="avoidTolls" />
                 <label>AvoidTolls</label>
-                <br>
-                <input type="checkbox" data-map_id="0" data-direction="optimizeWaypoints">
+                <br />
+                <input
+                    type="checkbox"
+                    data-map_id="0"
+                    data-direction="optimizeWaypoints" />
                 <label>OptimizeWaypoint</label>
             </div>
-            
-        <script type="module">
-          import {initMapSettings} from '../src/index.js';
-          initMapSettings()
-        
-        </script>
-        <script type="text/javascript" src="../dist/CoCreate-google-maps.js"></script>
-       
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
-    </div>
+
+            <script type="module">
+                import { initMapSettings } from "../src/index.js";
+                initMapSettings();
+            </script>
+            <script
+                type="text/javascript"
+                src="../dist/CoCreate-google-maps.js"></script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
+        </div>
     </body>
 </html>
