@@ -6,33 +6,33 @@
 // });
 
 // loader.load().then(() => {
-  
+
 // });
 
 
 
-var CoCreateMap = function(object) {
-    
+var CoCreateMap = function (object) {
+
     // variables
     // this.depth = 0;
 
     // selectors
     this.mapDivSelector = ".google_map";
-    
+
     // functions
     this.init(object);
 
-    this.requireLocationSelector = "data-geolocation";
+    this.requireLocationSelector = "geolocation";
 };
 
 /* global navigator, MutationObserver, google */
 CoCreateMap.prototype = {
-    mapDivs:[],
-    maps:[],
-    services:[],
-    markers:[], // MultiMarker & control
+    mapDivs: [],
+    maps: [],
+    services: [],
+    markers: [], // MultiMarker & control
     constructor: CoCreateMap,
-    init: function(object){
+    init: function (object) {
         let _this = this;
         this.__proto__.mapDivs = document.querySelectorAll(this.mapDivSelector);
         if (object !== undefined) {
@@ -42,12 +42,12 @@ CoCreateMap.prototype = {
             let curLocation = document.querySelector(`[${this.requireLocationSelector}]`);
             let isCurLocation = curLocation ? curLocation.getAttribute(this.requireLocationSelector) : false;
             if (navigator.geolocation && isCurLocation == "true") {
-                let options = {timeout:5000};
+                let options = { timeout: 5000 };
                 navigator.geolocation.getCurrentPosition(this.showLocation, this.errHandler, options);
             }
-            else this.errHandler({code:1});
+            else this.errHandler({ code: 1 });
         }
-        
+
         let observer = new MutationObserver(
             function (mutationList, observer) {
                 mutationList.forEach(mutation => {
@@ -69,7 +69,7 @@ CoCreateMap.prototype = {
             }
         }
     },
-    showLocation: function(position) {
+    showLocation: function (position) {
         let latitude = position.coords.latitude;
         let longitude = position.coords.longitude;
         for (let map of this.mapDivs) {
@@ -77,7 +77,7 @@ CoCreateMap.prototype = {
             this.renderMap(mapInfo);
         }
     },
-    errHandler: function(err) {
+    errHandler: function (err) {
         if (err.code == 1)
             for (let map of this.mapDivs) {
                 let mapInfo = new MapInfo(map.dataset.map_id);
@@ -86,14 +86,14 @@ CoCreateMap.prototype = {
         else if (err.code == 2)
             alert("Error: Position is unavailable!");
     },
-    renderMap: function(mapInfo, markerInfo) {
+    renderMap: function (mapInfo, markerInfo) {
         let latitude = parseFloat(mapInfo.lat);
         let longitude = parseFloat(mapInfo.lng);
         let zoom = mapInfo.zoom;
         let map_id = mapInfo.map_id;
         let map_center = new google.maps.LatLng(latitude, longitude);
         this.__proto__.maps[map_id] = new google.maps.Map(
-            document.querySelector(`.google_map[data-map_id='${map_id}']`), {center: map_center, zoom: zoom});
+            document.querySelector(`.google_map[data-map_id='${map_id}']`), { center: map_center, zoom: zoom });
         // console.log(this.__proto__.maps[map_id].__proto__.getBounds());
         this.__proto__.maps[map_id].__proto__.bounds_changed = () => {
             console.log([this.maps[map_id].getCenter().lng(), this.maps[map_id].getCenter().lat()]);
@@ -106,7 +106,7 @@ CoCreateMap.prototype = {
             // this.setMarker(map_id, {draggable: true, position: {lat:latitude, lng:longitude}});
         }
         else {
-            if (markerInfo.option.position == undefined) markerInfo.option.position = {lat:latitude, lng:longitude};
+            if (markerInfo.option.position == undefined) markerInfo.option.position = { lat: latitude, lng: longitude };
             this.setMarker(map_id, markerInfo.option, markerInfo.marker_id);
         }
     },
@@ -116,7 +116,7 @@ CoCreateMap.prototype = {
      * @param marker_id : marker_id : not exist - add,  exist - update & delete
      * @return marker_id : success - marker_id, failure - -1;
      */
-    setMarker: function(map_id, option, marker_id) {
+    setMarker: function (map_id, option, marker_id) {
         option.map = this.maps[map_id];
         if (option.position !== undefined) { // add & update
             if (marker_id === undefined) { // add
@@ -151,7 +151,7 @@ CoCreateMap.prototype = {
      * @param parentInfo : parent selector of input
      * @return object from attributes
      */
-    attToObj: function(attributeName, addInfo = "", parentInfo = "") {
+    attToObj: function (attributeName, addInfo = "", parentInfo = "") {
         let inputs = document.querySelectorAll(`${parentInfo} input[data-${attributeName}]${addInfo}, ${parentInfo} input[name]${addInfo}, ${parentInfo} textarea[data-${attributeName}]${addInfo}, ${parentInfo} textarea[name]${addInfo}`);
         let result = {};
         for (let input of inputs) {
@@ -183,7 +183,7 @@ CoCreateMap.prototype = {
      * @param addInfo : additional selector of input
      * @param parentInfo : parent selector of input
      */
-    objToAtt: function(object, attributeName, addInfo = "", parentInfo = "") {
+    objToAtt: function (object, attributeName, addInfo = "", parentInfo = "") {
         let inputs = document.querySelectorAll(`${parentInfo} input[data-${attributeName}]${addInfo}, ${parentInfo} input[name]${addInfo}, ${parentInfo} textarea[data-${attributeName}]${addInfo}, ${parentInfo} textarea[name]${addInfo}`);
         for (let input of inputs) {
             let key;
@@ -208,7 +208,7 @@ function MapInfo(map_id, lng, lat, zoom) {
 
 MapInfo.prototype = {
     constructor: MapInfo,
-    init: function(map_id = 0, lng = -74.0060, lat = 40.7128, zoom = 15) {
+    init: function (map_id = 0, lng = -74.0060, lat = 40.7128, zoom = 15) {
         this.lat = parseFloat(lat);
         this.lng = parseFloat(lng);
         this.zoom = parseInt(zoom, 10);
@@ -222,8 +222,8 @@ function stripHtml(html) {
     return tmp.textContent || tmp.innerText || "";
 }
 
-function onlyUnique(value, index, self) { 
+function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
 
-export {CoCreateMap, onlyUnique, stripHtml};
+export { CoCreateMap, onlyUnique, stripHtml };
