@@ -1,3 +1,22 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.27...v1.5.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([a645484](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a64548428cb5d650d3c1f2e24d2910c236660489))
+* renamed data-geolocation to geolocation ([c67a8ac](https://github.com/CoCreate-app/CoCreate-google-maps/commit/c67a8acf9daa8ce1420f901b067e95455a7ae1b2))
+* replace -target -selector ([0ad3dca](https://github.com/CoCreate-app/CoCreate-google-maps/commit/0ad3dcaa475b16b2cd3facca64ae27b3a0f8f244))
+* Simplify geolocation attribute in current-location.html ([9c2533e](https://github.com/CoCreate-app/CoCreate-google-maps/commit/9c2533e7fc2ccb575f78093be4c81c80c0fd9685))
+* updated fetch-limit to filter-limit ([f210169](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f21016936cc7f2dae0d6400af106052471a8b95c))
+* webpack.config and package.json make use of mode=production instead of process.env ([b6d6adb](https://github.com/CoCreate-app/CoCreate-google-maps/commit/b6d6adbd7fd3d23c6864def644939d6b86dc323b))
+
+
+### Features
+
+* name attribute and variable renamed to key ([362b0dc](https://github.com/CoCreate-app/CoCreate-google-maps/commit/362b0dcdff256e3defcc0214c7572d6c7e818bce))
+* Refactor geolocation initialization and saving logic ([a51b42d](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a51b42d2c026f970cef4afcdd2c6c9f3e5dfef1b))
+* update template_id to render-selector attribute. update filter attributes to filter selector-attributes ([c31b978](https://github.com/CoCreate-app/CoCreate-google-maps/commit/c31b978172ed140d128ed59e357aa4470c7ea8cb))
+
 ## [1.4.27](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.26...v1.4.27) (2023-06-14)
 
 
