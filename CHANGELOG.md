@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.5.0...v1.6.0) (2023-08-17)
+
+
+### Features
+
+* bump cocreate dependencies for the latest updates and features ([511a018](https://github.com/CoCreate-app/CoCreate-google-maps/commit/511a0189fc86a9510f770f0414c6ccb38533c1d2))
+
 # [1.5.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.4.27...v1.5.0) (2023-08-16)
 
 
