@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.6.0...v1.6.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([4a21135](https://github.com/CoCreate-app/CoCreate-google-maps/commit/4a21135253efe67e5f3c701055fab5c57b1a3b76))
+* replace cdn with /dist ([1bb8b41](https://github.com/CoCreate-app/CoCreate-google-maps/commit/1bb8b41e4b53dcc1c6814443a001fc0b458ffe1e))
+* update file uploader ([963834c](https://github.com/CoCreate-app/CoCreate-google-maps/commit/963834c25f571cda7835ce41e988cddd63e56fad))
+
 # [1.6.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.5.0...v1.6.0) (2023-08-17)
 
 
