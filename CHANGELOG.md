@@ -1,3 +1,11 @@
+## [1.7.2](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.1...v1.7.2) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([cb984ed](https://github.com/CoCreate-app/CoCreate-google-maps/commit/cb984edf6f85c565163d7b506ffa869c9d4ced0f))
+* Update CoCreate depndencies to latest versions ([380a65f](https://github.com/CoCreate-app/CoCreate-google-maps/commit/380a65fbef3fd826de20b1e576ab54217da25f4d))
+
 ## [1.7.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.0...v1.7.1) (2023-08-21)
 
 
