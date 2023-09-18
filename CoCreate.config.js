@@ -8,17 +8,16 @@ module.exports = {
             "object": {
                 "_id": "60283a7771064611a678a1a5",
                 "name": "index.html",
-                "path": "/docs/google-maps/index.html",
+                "path": "/docs/google-maps",
+                "pathname": "/docs/google-maps/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
                     "*",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs/google-maps",
-                "parentDirectory": "{{parentDirectory}}",
+                "directory": "google-maps",
                 "content-type": "{{content-type}}",
-                "public": "true",
-                "website_id": "644d4bff8036fb9d1d1fd69c"
+                "public": "true"
             }
         }
     ]
