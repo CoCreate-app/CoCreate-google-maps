@@ -7,7 +7,7 @@ var CoCreateMapGetLocation = function () {
     this.attr = 'geolocation';
     this.element = null;
 
-    this.init = () => {
+    this.init = async () => {
         if (!this.ccMapAnimate) {
             this.ccMapAnimate = new CoCreateMapAnimate();
         }
@@ -21,7 +21,7 @@ var CoCreateMapGetLocation = function () {
             }
 
             if (this.element.getValue)
-                this.element.setValue(this.element.getValue())
+                this.element.setValue(await this.element.getValue())
 
             this.element.getValue = () => {
                 let coordinates = this.getPositionAsJSon(position)
