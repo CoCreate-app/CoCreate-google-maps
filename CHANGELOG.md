@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.2...v1.7.3) (2023-10-17)
+
+
+### Bug Fixes
+
+* await getValue() ([141d18c](https://github.com/CoCreate-app/CoCreate-google-maps/commit/141d18cc115f21dcd585cb30808386972d563e75))
+
 ## [1.7.2](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.1...v1.7.2) (2023-09-18)
 
 
