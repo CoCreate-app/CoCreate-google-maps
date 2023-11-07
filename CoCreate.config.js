@@ -12,8 +12,7 @@ module.exports = {
                 "pathname": "/docs/google-maps/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
-                    "*",
-                    "general.cocreate.app"
+                    "*"
                 ],
                 "directory": "google-maps",
                 "content-type": "{{content-type}}",
