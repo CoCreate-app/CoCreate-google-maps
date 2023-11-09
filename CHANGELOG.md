@@ -1,3 +1,12 @@
+## [1.7.6](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.5...v1.7.6) (2023-11-09)
+
+
+### Bug Fixes
+
+* meta name typo ([d3dbfbb](https://github.com/CoCreate-app/CoCreate-google-maps/commit/d3dbfbb904567ec4086213d53ac1a9139608963a))
+* update host ([768e463](https://github.com/CoCreate-app/CoCreate-google-maps/commit/768e463396503b33cfe4890b297ed5deb8cb6ccb))
+* updated date to ISO format with UTC timezone ([b10e1d4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/b10e1d4f8256cdcefb431d9ff49be028c27aa240))
+
 ## [1.7.5](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.4...v1.7.5) (2023-11-03)
 
 
