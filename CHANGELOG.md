@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.8.0...v1.9.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* pass attributes renamed to state ([668a90e](https://github.com/CoCreate-app/CoCreate-google-maps/commit/668a90e67e7087775620c57f91da34b0e6d9309e))
+* update nav, edit button and css path ([f22cf4a](https://github.com/CoCreate-app/CoCreate-google-maps/commit/f22cf4a98b8a5dc359c566c09782900b217e80bb))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([6d151bf](https://github.com/CoCreate-app/CoCreate-google-maps/commit/6d151bf2c499e8cd5f40717a8d92d7fd1c06d2bb))
+
 # [1.8.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.7.7...v1.8.0) (2023-11-19)
 
 
