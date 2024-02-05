@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.0...v1.10.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* Removed https://cdn.cocreate.app/latest/CoCreate.min.css ([6bac514](https://github.com/CoCreate-app/CoCreate-google-maps/commit/6bac514c082239291a5b564a653b6711e7f86a17))
+
 # [1.10.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.9.0...v1.10.0) (2023-11-25)
 
 
