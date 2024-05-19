@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.2...v1.10.3) (2024-05-19)
+
+
+### Bug Fixes
+
+* replaced localstorage-key with  operator ([42866bc](https://github.com/CoCreate-app/CoCreate-google-maps/commit/42866bcef94c88418bb375620ad0e7fc5fd9554b))
+
 ## [1.10.2](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.1...v1.10.2) (2024-04-29)
 
 
