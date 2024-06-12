@@ -1,3 +1,11 @@
+## [1.10.4](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.3...v1.10.4) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([2473545](https://github.com/CoCreate-app/CoCreate-google-maps/commit/2473545d780af9a5122947d049a1362539fc69a4))
+* svg icon class ([6b0aa57](https://github.com/CoCreate-app/CoCreate-google-maps/commit/6b0aa5774c5d0176ac745479973b5d1dff6cbaf6))
+
 ## [1.10.3](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.2...v1.10.3) (2024-05-19)
 
 
