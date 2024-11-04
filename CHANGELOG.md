@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.4...v1.11.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* pretier.config.js and file formating ([8df31f8](https://github.com/CoCreate-app/CoCreate-google-maps/commit/8df31f82254ffa465138d5a510c3ae5a0e015d1d))
+
+
+### Features
+
+* add prettier.config.js and format files ([52d7b73](https://github.com/CoCreate-app/CoCreate-google-maps/commit/52d7b73ed8c6ce542ce03be62b53ea7164fb6cca))
+* add prettier.config.js and format files ([81974e3](https://github.com/CoCreate-app/CoCreate-google-maps/commit/81974e30f06146cbe6e19f314a6b40a2a03af5d7))
+
 ## [1.10.4](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.3...v1.10.4) (2024-06-12)
 
 
