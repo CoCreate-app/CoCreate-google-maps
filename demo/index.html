@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google Maps API</title>
+	</head>
+	<body>
+		<form array="jobs" object="675b33bc04243e729a12106e">
+			<input
+				key="formatted_address"
+				google-maps="places"
+				google-maps-key="autocomplete"
+				type="text"
+				placeholder="Enter a location" />
+			<input type="text" key="location.type" value="Point" />
+			<input
+				key="location.coordinates[0]"
+				google-maps="places"
+				google-maps-key="geometry.location.lat"
+				type="text"
+				placeholder="Enter a location" />
+			<input
+				key="location.coordinates[1]"
+				google-maps="places"
+				google-maps-key="geometry.location.lng"
+				type="text"
+				placeholder="Enter a location.lng" />
+			<button actions="save">Save</button>
+		</form>
+
+		<form name="mapConfig">
+			<!-- Map container with center configuration -->
+			<div
+				google-maps="maps"
+				google-maps-key="map"
+				style="width: 100%; height: 400px"></div>
+
+			<!-- Center Latitude -->
+			<input
+				type="number"
+				google-maps="maps"
+				google-maps-key="center.lat"
+				value="40.7128"
+				placeholder="Latitude" />
+
+			<!-- Center Longitude -->
+			<input
+				type="number"
+				google-maps="maps"
+				google-maps-key="center.lng"
+				value="-74.0060"
+				placeholder="Longitude" />
+			<!-- Zoom level -->
+			<input
+				type="number"
+				name="zoom"
+				google-maps="maps"
+				google-maps-key="zoom"
+				placeholder="Zoom Level"
+				value="10" />
+
+			<!-- Map Center Latitude -->
+			<input
+				type="number"
+				name="latitude"
+				google-maps="maps"
+				google-maps-key="center.lat"
+				placeholder="Latitude"
+				step="any"
+				value="40.7128" />
+
+			<!-- Map Center Longitude -->
+			<input
+				type="number"
+				name="longitude"
+				google-maps="maps"
+				google-maps-key="center.lng"
+				placeholder="Longitude"
+				step="any"
+				value="-74.0060" />
+
+			<!-- Map Type (e.g., roadmap, satellite) -->
+			<select
+				name="mapType"
+				google-maps="maps"
+				google-maps-key="mapTypeId">
+				<option value="roadmap" selected>Roadmap</option>
+				<option value="satellite">Satellite</option>
+				<option value="hybrid">Hybrid</option>
+				<option value="terrain">Terrain</option>
+			</select>
+
+			<!-- Autocomplete for Places -->
+			<input
+				type="text"
+				name="location"
+				google-maps="places"
+				google-maps-key="autocomplete"
+				placeholder="Search for a location" />
+
+			<!-- Enable/Disable Controls -->
+			<label>
+				<input
+					type="checkbox"
+					name="disableDefaultUI"
+					google-maps="maps"
+					google-maps-key="disableDefaultUI"
+					value="true" />
+				Disable Default Controls
+			</label>
+
+			<!-- Traffic Layer -->
+			<label>
+				<input
+					type="checkbox"
+					name="trafficLayer"
+					google-maps="maps"
+					google-maps-key="trafficLayer"
+					value="true" />
+				Show Traffic Layer
+			</label>
+
+			<!-- Marker Example -->
+			<button
+				type="button"
+				google-maps="maps"
+				google-maps-key="addMarker">
+				Add Marker at Center
+			</button>
+		</form>
+
+		<form id="geocoderForm">
+			<!-- Inputs to define the Geocoding API payload -->
+			<input
+				type="number"
+				google-maps="geocoder"
+				google-maps-key="location.lat"
+				placeholder="Latitude"
+				value="9.9295982" />
+			<input
+				type="number"
+				google-maps="geocoder"
+				google-maps-key="location.lng"
+				placeholder="Longitude"
+				value="-84.1026617" />
+
+			<!-- Input to display the geocoded address -->
+			<input
+				google-maps="geocoder"
+				google-maps-key="response[0].formatted_address"
+				google-maps-request="false"
+				placeholder="Address will appear here" />
+
+			<!-- Button to trigger geocoding -->
+			<button actions="googlemaps.geocoder">Get Address</button>
+		</form>
+
+		<script src="./dist/CoCreate.js"></script>
+	</body>
+</html>

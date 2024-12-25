@@ -1,358 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Google Search Autocomplete</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <style>
-            .google_map {
-                height: 300px;
-            }
-        </style>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google Maps API Demo</title>
+	</head>
+	<body>
+		<form array="jobs" object="675b33bc04243e729a12106e">
+			<input
+				key="formatted_address"
+				google-maps="places"
+				google-maps-key="autocomplete"
+				type="text"
+				placeholder="Enter a location" />
+			<input type="text" key="location.type" value="Point" />
+			<input
+				key="location.coordinates[0]"
+				google-maps="places"
+				google-maps-key="geometry.location.lat"
+				type="text"
+				placeholder="Enter a location" />
+			<input
+				key="location.coordinates[1]"
+				google-maps="places"
+				google-maps-key="geometry.location.lng"
+				type="text"
+				placeholder="Enter a location.lng" />
+			<button actions="save">Save</button>
+		</form>
 
-        <link rel="manifest" href="/manifest.webmanifest" />
-    </head>
-    <body>
-        <div data-location_request="true">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Establishment</td>
-                        <td colspan="3">
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="establishment"
-                                data-map_id="0"
-                                placeholder="Establishment"
-                                class="main-search"
-                                data-place_id="0"
-                                style="width: 100%"
-                                autocomplete="off" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Address 1</td>
-                        <td colspan="3">
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="address"
-                                data-map_id="0"
-                                placeholder="Address"
-                                class="main-search"
-                                data-place_id="0"
-                                style="width: 100%"
-                                autocomplete="off" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>City</td>
-                        <td>
-                            <input
-                                class="main-search"
-                                data-map_autocomplete="true"
-                                type="text"
-                                data-map_id="0"
-                                data-place="administrative_area_level_2"
-                                placeholder="City"
-                                data-place_id="0"
-                                autocomplete="off" />
-                        </td>
-                        <td>Region / Country</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="region_country"
-                                data-map_id="0"
-                                placeholder="Region / Country"
-                                data-place_id="0"
-                                autocomplete="off" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Location</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="location"
-                                data-map_id="0"
-                                placeholder="Location"
-                                data-place_id="0" />
-                        </td>
-                        <td>Route</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="route"
-                                data-map_id="0"
-                                placeholder="Route"
-                                data-place_id="0" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Street Number</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="street_number"
-                                data-map_id="0"
-                                data-place_value_type="short_name"
-                                placeholder="Street Number"
-                                data-place_id="0" />
-                        </td>
-                        <td>Postal Code</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="postal_code"
-                                data-map_id="0"
-                                data-place_value_type="short_name"
-                                placeholder="Postal Code"
-                                data-place_id="0" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Locality</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="locality"
-                                data-map_id="0"
-                                placeholder="Locality"
-                                data-place_id="0" />
-                        </td>
-                        <td>Country Code</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="country_code"
-                                data-place_value_type="short_name"
-                                data-map_id="0"
-                                placeholder="Country Code"
-                                data-place_id="0" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>State</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="administrative_area_level_1"
-                                placeholder="State"
-                                data-map_id="0"
-                                data-place_id="0" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Latitude</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="latitude"
-                                data-map_id="0"
-                                placeholder="Latitude"
-                                data-place_id="0" />
-                        </td>
-                        <td>Longitude</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="longitude"
-                                data-map_id="0"
-                                placeholder="Longitude"
-                                data-place_id="0" />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div
-                class="google_map"
-                data-map_id="0"
-                data-place_id="0"
-                data-map_lng
-                data-map_lat
-                data-map_zoom
-                data-travel_mode></div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Establishment</td>
-                        <td colspan="3">
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="establishment"
-                                data-map_id="1"
-                                placeholder="Establishment"
-                                class="main-search"
-                                data-place_id="1"
-                                style="width: 100%" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Address 2</td>
-                        <td colspan="3">
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="address"
-                                data-map_id="1"
-                                placeholder="Address"
-                                class="main-search"
-                                data-place_id="1"
-                                style="width: 100%" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>City</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="administrative_area_level_2"
-                                data-map_id="1"
-                                placeholder="City"
-                                data-place_id="1" />
-                        </td>
-                        <td>Region / Country</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-place="region_country"
-                                data-map_id="1"
-                                placeholder="Region / Country"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Location</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="location"
-                                data-map_id="1"
-                                placeholder="Location"
-                                data-place_id="1" />
-                        </td>
-                        <td>Route</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="route"
-                                data-map_id="1"
-                                placeholder="Route"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Street Number</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="street_number"
-                                data-map_id="1"
-                                data-place_value_type="short_name"
-                                placeholder="Street Number"
-                                data-place_id="1" />
-                        </td>
-                        <td>Postal Code</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="postal_code"
-                                data-map_id="1"
-                                data-place_value_type="short_name"
-                                placeholder="Postal Code"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Locality</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="locality"
-                                data-map_id="1"
-                                placeholder="Locality"
-                                data-place_id="1" />
-                        </td>
-                        <td>Country Code</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="country_code"
-                                data-map_id="1"
-                                data-place_value_type="short_name"
-                                placeholder="Country Code"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>State</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="administrative_area_level_1"
-                                data-map_id="1"
-                                placeholder="State"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Latitude</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="latitude"
-                                placeholder="Latitude"
-                                data-map_id="1"
-                                data-place_id="1" />
-                        </td>
-                        <td>Longitude</td>
-                        <td>
-                            <input
-                                type="text"
-                                data-place="longitude"
-                                placeholder="Longitude"
-                                data-map_id="1"
-                                data-place_id="1" />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div
-                class="google_map"
-                data-map_id="1"
-                data-place_id="1"
-                data-map_lng
-                data-map_lat
-                data-map_zoom
-                data-travel_mode></div>
-            <div data-location_request="true"></div>
-            <button onclick="clearAll();">Clear</button>
-        </div>
-        <!--<script type="text/javascript" src="../src/map.js"></script>-->
-        <!--<script type="text/javascript" src="../src/animate.js"></script>-->
-        <!--<script type="text/javascript" src="../src/autocomplete.js"></script>-->
-        <!--<script type="text/javascript" src="../src/direction.js"></script>-->
-        <!--<script type="text/javascript" src="../src/location.js"></script>-->
-        <!--<script type="text/javascript" src="../src/search.js"></script>-->
-        <!--<script type="module" src="../src/index.js"></script>-->
-        <script type="module">
-            import { initMapSettings } from "../src/index.js";
-            initMapSettings();
-        </script>
-        <script
-            type="text/javascript"
-            src="../dist/CoCreate-google-maps.js"></script>
+		<form name="mapConfig">
+			<!-- Map container with center configuration -->
+			<div
+				google-maps="maps"
+				google-maps-key="map"
+				style="width: 100%; height: 400px"></div>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCxZ_RRXPQ2Uqufgo39daiXZeQZQpIAiM&libraries=places&callback=initMapSettings"></script>
+			<!-- Center Latitude -->
+			<input
+				type="number"
+				google-maps="maps"
+				google-maps-key="center.lat"
+				value="40.7128"
+				placeholder="Latitude" />
 
-        <!--<script async-->
-        <!--    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsud7vA9plHy7FGIicfQ5IiwtJFIreVg=JP&language=ja&callback=initMapSettings">-->
-        <!--</script>-->
-    </body>
+			<!-- Center Longitude -->
+			<input
+				type="number"
+				google-maps="maps"
+				google-maps-key="center.lng"
+				value="-74.0060"
+				placeholder="Longitude" />
+			<!-- Zoom level -->
+			<input
+				type="number"
+				name="zoom"
+				google-maps="maps"
+				google-maps-key="zoom"
+				placeholder="Zoom Level"
+				value="10" />
+
+			<!-- Map Center Latitude -->
+			<input
+				type="number"
+				name="latitude"
+				google-maps="maps"
+				google-maps-key="center.lat"
+				placeholder="Latitude"
+				step="any"
+				value="40.7128" />
+
+			<!-- Map Center Longitude -->
+			<input
+				type="number"
+				name="longitude"
+				google-maps="maps"
+				google-maps-key="center.lng"
+				placeholder="Longitude"
+				step="any"
+				value="-74.0060" />
+
+			<!-- Map Type (e.g., roadmap, satellite) -->
+			<select
+				name="mapType"
+				google-maps="maps"
+				google-maps-key="mapTypeId">
+				<option value="roadmap" selected>Roadmap</option>
+				<option value="satellite">Satellite</option>
+				<option value="hybrid">Hybrid</option>
+				<option value="terrain">Terrain</option>
+			</select>
+
+			<!-- Autocomplete for Places -->
+			<input
+				type="text"
+				name="location"
+				google-maps="places"
+				google-maps-key="autocomplete"
+				placeholder="Search for a location" />
+
+			<!-- Enable/Disable Controls -->
+			<label>
+				<input
+					type="checkbox"
+					name="disableDefaultUI"
+					google-maps="maps"
+					google-maps-key="disableDefaultUI"
+					value="true" />
+				Disable Default Controls
+			</label>
+
+			<!-- Traffic Layer -->
+			<label>
+				<input
+					type="checkbox"
+					name="trafficLayer"
+					google-maps="maps"
+					google-maps-key="trafficLayer"
+					value="true" />
+				Show Traffic Layer
+			</label>
+
+			<!-- Marker Example -->
+			<button
+				type="button"
+				google-maps="maps"
+				google-maps-key="addMarker">
+				Add Marker at Center
+			</button>
+		</form>
+
+		<script src="./dist/CoCreate.js"></script>
+	</body>
 </html>

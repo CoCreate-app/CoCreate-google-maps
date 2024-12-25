@@ -1,4 +1,6 @@
 import Observer from "@cocreate/observer";
+import Actions from "@cocreate/actions";
+import Api from "@cocreate/api";
 
 const name = "google-maps";
 const GOOGLE_API_KEY = "AIzaSyCXRaA3liul4_0D5MXLybx9s3s_o_Q2opI";
@@ -93,7 +95,7 @@ const googleMapsHandlers = {
 			autocomplete.addListener("place_changed", () => {
 				const data = { [name]: autocomplete.getPlace() };
 				let form = element.closest("form");
-				CoCreate.api.setData({ name, method, form }, data);
+				CoCreate.api.setData({ name, method, form, data });
 			});
 		}
 	},
@@ -126,6 +128,47 @@ const googleMapsHandlers = {
 	}
 };
 
+googleMapsHandlers.geocoder = async (action) => {
+	if (typeof action === "string") return;
+	let { method, element, key } = action;
+
+	await loadLibrary("geocoding"); // Ensure the Geocoding library is loaded
+
+	const geocoder = new google.maps.Geocoder();
+
+	// Fetch the data directly from the form or element
+	const form = element.closest("form");
+	const data = await CoCreate.api.getData({ name, method, element, form });
+
+	// Directly pass the data to geocoder.geocode()
+	geocoder.geocode(data, (response, status) => {
+		if (status === "OK" && response[0]) {
+			const data = {
+				[name]: { response }
+			};
+			CoCreate.api.setData({
+				name,
+				method,
+				form,
+				data
+			});
+			dispatchEvent(action);
+		} else {
+			console.error(`Geocoding failed with status: ${status}`);
+		}
+	});
+};
+
+function dispatchEvent(action) {
+	document.dispatchEvent(
+		new CustomEvent(action.endEvent, {
+			detail: {
+				data: action
+			}
+		})
+	);
+}
+
 function getOrCreateMap(element, options = {}) {
 	// Check if this element already has a map instance
 	if (element.googleMapInstance) {
@@ -157,6 +200,17 @@ Observer.init({
 		initElements(mutation.target);
 	}
 });
+
+// Actions Integration
+Actions.init([
+	{
+		name: "googlemaps",
+		endEvent: "googlemaps",
+		callback(action) {
+			googleMapsHandlers[action.method](action);
+		}
+	}
+]);
 
 init();
 
