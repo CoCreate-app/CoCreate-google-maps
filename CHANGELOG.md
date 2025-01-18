@@ -1,3 +1,16 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.11.0...v1.12.0) (2025-01-18)
+
+
+### Bug Fixes
+
+* demo array ([599c168](https://github.com/CoCreate-app/CoCreate-google-maps/commit/599c16821c1901d7a6b5658e80f6f798d9efc0aa))
+
+
+### Features
+
+* reverse geocoding intergration ([a9bb9c4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a9bb9c49fcde1eb9ae55a6117cb85463889c6649))
+* Supports using @cocreate/api functions for request and response data as well as rendering ([aaf94ad](https://github.com/CoCreate-app/CoCreate-google-maps/commit/aaf94ad3ae7307dd196bca1effcfb02c96263409))
+
 # [1.11.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.10.4...v1.11.0) (2024-11-04)
 
 
