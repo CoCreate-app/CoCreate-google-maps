@@ -194,10 +194,10 @@ function getOrCreateMap(element, options = {}) {
 
 Observer.init({
 	name: "CoCreateElementsChildList",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: name,
 	callback: function (mutation) {
-		initElements(mutation.target);
+		initElements([mutation.target]);
 	}
 });
 
