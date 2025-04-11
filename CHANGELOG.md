@@ -1,3 +1,11 @@
+## [1.12.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.12.0...v1.12.1) (2025-04-11)
+
+
+### Bug Fixes
+
+* dispatch end event on action element rather than document ([5143291](https://github.com/CoCreate-app/CoCreate-google-maps/commit/51432919e8a2c8d23bfa339732ea291ee1eb1acf))
+* update observer obseve param to type and and attributeName to attributeFilter ([b0111bf](https://github.com/CoCreate-app/CoCreate-google-maps/commit/b0111bf6074b554474305bcd95ec7206ccb2c5d1))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.11.0...v1.12.0) (2025-01-18)
 
 
