@@ -7,7 +7,7 @@ const GOOGLE_API_KEY = "AIzaSyCXRaA3liul4_0D5MXLybx9s3s_o_Q2opI";
 let scriptLoaded = false;
 
 // Track already loaded libraries
-const loadedLibraries = new Set();
+const loadedLibraries = new Map();
 
 async function init() {
 	await loadGoogleMaps(); // Load core script
@@ -42,18 +42,36 @@ function loadGoogleMaps() {
 
 // Load additional libraries dynamically using importLibrary
 async function loadLibrary(library) {
+	// Check if the library's promise is already stored in the Map
 	if (loadedLibraries.has(library)) {
-		console.log(`Library "${library}" is already loaded.`);
-		return; // Skip if already loaded
+		return loadedLibraries.get(library); // Return the existing promise
 	}
 
-	try {
-		await window.google.maps.importLibrary(library);
-		loadedLibraries.add(library);
-		console.log(`Loaded library: ${library}`);
-	} catch (error) {
-		console.error(`Failed to load library "${library}":`, error);
-	}
+	// Attempt to load the library using the `importLibrary`
+	const libraryPromise = window.google.maps
+		.importLibrary(library)
+		.then(() => {
+			console.log(
+				`Google Maps library "${library}" loaded successfully.`
+			);
+			loadedLibraries.set(library, libraryPromise); // Confirm the library is loaded by storing the promise
+			return window.google.maps[library]; // Return the loaded library instance if you need it
+		})
+		.catch((error) => {
+			console.error(
+				`Failed to load Google Maps library "${library}":`,
+				error
+			);
+			loadedLibraries.delete(library); // Remove the library if loading failed
+			throw error; // Rethrow the error for further handling
+		});
+
+	// Store the promise in the Map for caching
+	loadedLibraries.set(library, libraryPromise);
+
+	// Await the resolution of the library before returning
+	const resolvedLibrary = await libraryPromise;
+	return resolvedLibrary;
 }
 
 // Initialize Google Maps elements dynamically
