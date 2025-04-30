@@ -1,3 +1,14 @@
+## [1.12.2](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.12.1...v1.12.2) (2025-04-30)
+
+
+### Bug Fixes
+
+* added css-loader ([2cef504](https://github.com/CoCreate-app/CoCreate-google-maps/commit/2cef504a03ab712c737e779df4b01e2b5f9d57fe))
+* import libraries ([a6c5d68](https://github.com/CoCreate-app/CoCreate-google-maps/commit/a6c5d684dc4cf51addd56966fb25d656e7f41db1))
+* update query attributes ([86a7af4](https://github.com/CoCreate-app/CoCreate-google-maps/commit/86a7af4e6f86aa5414b5f7b2fd7c46bcaec14561))
+* updated cocreate modules versions ([aa10570](https://github.com/CoCreate-app/CoCreate-google-maps/commit/aa10570d42553f05093a661f166782a8e252e5e1))
+* webpack.config and devdependencies ([e01583b](https://github.com/CoCreate-app/CoCreate-google-maps/commit/e01583b3d10120f37a3d3b527a338b7be29f589d))
+
 ## [1.12.1](https://github.com/CoCreate-app/CoCreate-google-maps/compare/v1.12.0...v1.12.1) (2025-04-11)
 
 
